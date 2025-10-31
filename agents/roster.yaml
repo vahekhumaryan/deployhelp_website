@@ -1,0 +1,44 @@
+version: 1
+orchestrator: mission_control
+default_channel: "#deployhelp-mission"
+cadence:
+  standup_time: "09:00 Europe/Tallinn"
+  sprint_review: "Friday 16:00 Europe/Tallinn"
+  strategy_review: "First Monday 15:00 Europe/Tallinn"
+agents:
+  - id: mission_control
+    name: Mission Control
+    persona_file: mission_control.yaml
+    purpose: "Program management and decision facilitation"
+  - id: business_strategist
+    name: Business Strategist
+    persona_file: business_strategist.yaml
+    purpose: "Align digital initiatives with DEPLOYHELP service strategy"
+  - id: brand_ux_lead
+    name: Brand & UX Lead
+    persona_file: brand_ux_lead.yaml
+    purpose: "Craft brand expression and user experience"
+  - id: full_stack_engineer
+    name: Full-Stack Web Engineer
+    persona_file: full_stack_engineer.yaml
+    purpose: "Build and maintain DEPLOYHELP web assets"
+  - id: content_copywriter
+    name: Content & Copywriter
+    persona_file: content_copywriter.yaml
+    purpose: "Deliver conversion-focused content"
+  - id: seo_analytics_specialist
+    name: SEO & Analytics Specialist
+    persona_file: seo_analytics_specialist.yaml
+    purpose: "Optimize organic visibility and track performance"
+  - id: marketing_ops
+    name: Marketing Ops & Automation
+    persona_file: marketing_ops.yaml
+    purpose: "Automate lead capture and nurture workflows"
+  - id: social_manager
+    name: Social & Community Manager
+    persona_file: social_manager.yaml
+    purpose: "Grow DEPLOYHELP presence across social platforms"
+  - id: paid_media_strategist
+    name: Paid Media Strategist
+    persona_file: paid_media_strategist.yaml
+    purpose: "Plan and evaluate paid growth experiments"

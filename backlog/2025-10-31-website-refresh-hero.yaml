@@ -1,0 +1,45 @@
+id: website-refresh-q4-hero
+title: Refresh hero section for DEPLOYHELP.com homepage
+created: 2025-10-31
+status: discovery
+priority: high
+owner: brand_ux_lead
+contributors:
+  - content_copywriter
+  - seo_analytics_specialist
+  - full_stack_engineer
+due: 2025-11-14
+objective:
+  - Increase homepage lead conversion rate by 20%
+  - Align messaging with updated support acceleration offer tiers
+success_metrics:
+  baseline:
+    conversion_rate: 0.8
+  target:
+    conversion_rate: 0.96
+assets:
+  - docs/brand/voice-guide.md
+  - analytics/dashboards/homepage.json
+  - reports/week-01.md
+milestones:
+  - date: 2025-11-01
+    description: Mission Control kickoff
+    owner: mission_control
+  - date: 2025-11-04
+    description: UX concepts ready for review
+    owner: brand_ux_lead
+  - date: 2025-11-06
+    description: Copy draft v1
+    owner: content_copywriter
+  - date: 2025-11-10
+    description: Implementation complete on staging
+    owner: full_stack_engineer
+risk_register:
+  - risk: Insufficient value props/testimonials for new hero copy
+    mitigation: Business Strategist to source updated proof points by 2025-11-03
+  - risk: Potential CLS regression due to hero animation
+    mitigation: Engineer to run Lighthouse + remove heavy motion on mobile
+history:
+  - timestamp: 2025-10-31T09:30:00+02:00
+    author: mission_control
+    note: Ticket created from leadership request

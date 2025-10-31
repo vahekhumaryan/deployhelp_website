@@ -1,0 +1,48 @@
+id: seo-technical-audit-q4
+title: Run Q4 technical SEO and analytics instrumentation audit
+created: 2025-10-31
+status: planned
+priority: medium
+owner: seo_analytics_specialist
+contributors:
+  - full_stack_engineer
+  - marketing_ops
+due: 2025-11-21
+objective:
+  - Validate GA4, tag manager, and conversion tracking accuracy.
+  - Identify technical SEO fixes to improve crawlability and Core Web Vitals.
+success_metrics:
+  baseline:
+    ga4_event_accuracy: 0.92
+  target:
+    ga4_event_accuracy: 0.99
+recommendations_target: 10
+assets:
+  - analytics/current-setup-diagram.png
+  - docs/seo/technical-checklist.md
+milestones:
+  - date: 2025-11-03
+    description: Crawl and performance data collected
+    owner: seo_analytics_specialist
+  - date: 2025-11-07
+    description: Analytics instrumentation QA complete
+    owner: marketing_ops
+  - date: 2025-11-15
+    description: Engineering review of fixes
+    owner: full_stack_engineer
+deliverables:
+  - name: Technical audit report
+    format: markdown
+    path: docs/seo/reports/2025-q4-technical-audit.md
+  - name: Fix-backlog issues
+    format: tickets
+    path: backlog/*-seo-fix-*.yaml
+risk_register:
+  - risk: Limited engineering bandwidth for remediation
+    mitigation: Prioritize fixes by impact; coordinate sprint slots early.
+  - risk: Missing historical data for baseline comparison
+    mitigation: Use Search Console & previous exports to approximate trend.
+history:
+  - timestamp: 2025-10-31T10:15:00+02:00
+    author: mission_control
+    note: Scheduled to support November performance goals.
