@@ -1,905 +1,1200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-ZNC2C0HYVQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DeployHelp - AI-Driven Customer Support Solutions. Transform your customer experience with our comprehensive support implementation, business process automation, and analytics services.">
-    <meta name="keywords" content="customer support, AI support, business automation, customer experience, support implementation, analytics, DeployHelp">
-    <meta name="author" content="DeployHelp OÜ">
+    <meta name="description" content="DEPLOYHELP LLC builds neobrutalist, AI-ready customer support systems. Fractional CX leadership, automation sprints, and team enablement for product-led companies ready to scale.">
+    <meta name="keywords" content="customer support consulting, AI customer service, support automation, CX strategy, DEPLOYHELP, fractional CX, customer experience design">
+    <meta name="author" content="DEPLOYHELP LLC">
     <meta name="robots" content="index, follow">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://deployhelp.com/">
-    
-    <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="DeployHelp - AI-Driven Customer Support Transformation">
-    <meta property="og:description" content="Transform your customer experience with our comprehensive support solutions, automation, and analytics services.">
+    <meta property="og:title" content="DEPLOYHELP LLC | Neobrutalist Customer Support Consulting">
+    <meta property="og:description" content="Partner with DEPLOYHELP to architect bold, AI-powered support operations, activate teams, and keep customer outcomes at the center.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deployhelp.com">
     <meta property="og:image" content="https://deployhelp.com/og-image.jpg">
-    <meta property="og:site_name" content="DeployHelp">
-    
-    <!-- Twitter Card -->
+    <meta property="og:site_name" content="DEPLOYHELP LLC">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DeployHelp - AI-Driven Customer Support Transformation">
-    <meta name="twitter:description" content="Transform your customer experience with our comprehensive support solutions, automation, and analytics services.">
+    <meta name="twitter:title" content="DEPLOYHELP LLC | Neobrutalist CX Consulting">
+    <meta name="twitter:description" content="Neobrutalist support systems, AI adoption sprints, and fractional CX leadership for fast-moving product teams.">
     <meta name="twitter:image" content="https://deployhelp.com/og-image.jpg">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <title>DeployHelp - AI-Driven Customer Support Transformation | Customer Support Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>DEPLOYHELP LLC | Neobrutalist Customer Support Consulting</title>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    :root {
-        --primary-color: #ff00ff;
-        --secondary-color: #00ffff;
-        --accent-color: #ffff00;
-        --neon-pink: #ff1493;
-        --neon-blue: #00bfff;
-        --neon-green: #39ff14;
-        --text-color: #ffffff;
-        --text-glow: #00ffff;
-        --background: #0a0a0a;
-        --background-dark: #000000;
-        --card-background: rgba(20, 20, 20, 0.9);
-        --grid-color: #333333;
-        --max-width: 1200px;
-    }
-
-    html, body {
-        height: 100%;
-        margin: 0;
-        background: var(--background);
-        overflow-x: hidden;
-    }
-
-    body {
-        font-family: 'Share Tech Mono', monospace;
-        line-height: 1.6;
-        color: var(--text-color);
-        background: 
-            linear-gradient(90deg, transparent 99%, var(--grid-color) 100%),
-            linear-gradient(0deg, transparent 99%, var(--grid-color) 100%),
-            radial-gradient(ellipse at center, #1a0033 0%, #000000 100%);
-        background-size: 30px 30px, 30px 30px, 100% 100%;
-        background-attachment: fixed;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    @keyframes scanlines {
-        0% { background-position: 0 0, 0 0, 0 0; }
-        100% { background-position: 20px 20px, 20px 20px, 0 0; }
-    }
-
-    @keyframes neonGlow {
-        0%, 100% { 
-            text-shadow: 0 0 3px currentColor, 0 0 6px currentColor, 0 0 9px currentColor;
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
-        50% { 
-            text-shadow: 0 0 2px currentColor, 0 0 4px currentColor, 0 0 6px currentColor;
+
+        :root {
+            --bg: #f7f5f0;
+            --surface: #ffffff;
+            --surface-accent: #f0f5ff;
+            --surface-strong: #ffeecf;
+            --text: #161616;
+            --muted: #585858;
+            --border: #161616;
+            --accent: #ff5a3c;
+            --accent-strong: #2233ff;
+            --accent-soft: #ffe347;
+            --shadow: 8px 8px 0 var(--border);
+            --shadow-hover: 14px 14px 0 var(--border);
+            --max-width: 1180px;
+            --header-height: 76px;
         }
-    }
 
-    @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-
-    @keyframes glitch {
-        0% { transform: translate(0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(-2px, -2px); }
-        60% { transform: translate(2px, 2px); }
-        80% { transform: translate(2px, -2px); }
-        100% { transform: translate(0); }
-    }
-
-    main {
-        flex: 1 0 auto;
-    }
-
-    .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    /* Navigation */
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        border-bottom: 2px solid var(--primary-color);
-        box-shadow: 0 0 20px var(--primary-color);
-        z-index: 1000;
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-    }
-
-    .logo {
-        font-family: 'Orbitron', monospace;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        text-decoration: none;
-        letter-spacing: 2px;
-        animation: neonGlow 3s ease-in-out infinite alternate;
-    }
-
-    .logo:hover {
-        color: var(--secondary-color);
-        animation: glitch 0.3s ease-in-out;
-    }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-links a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-weight: 700;
-        padding: 0.5rem 1.5rem;
-        margin: 0 0.5rem;
-        border: 2px solid transparent;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-        position: relative;
-    }
-
-    .nav-links a:hover {
-        color: var(--secondary-color);
-        border: 2px solid var(--secondary-color);
-        box-shadow: 0 0 15px var(--secondary-color);
-        text-shadow: 0 0 10px var(--secondary-color);
-    }
-
-    .nav-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-    }
-
-    .nav-toggle span {
-        width: 25px;
-        height: 3px;
-        background: var(--primary-color);
-        box-shadow: 0 0 10px var(--primary-color);
-        transition: 0.3s;
-    }
-
-    /* Hero Section */
-    .hero {
-        padding: 0.8rem 0 0.3rem;
-        background: 
-            linear-gradient(45deg, rgba(255, 0, 255, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%),
-            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        text-align: center;
-        margin-top: 60px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        animation: scan 3s linear infinite;
-    }
-
-    @keyframes scan {
-        0% { left: -100%; }
-        100% { left: 100%; }
-    }
-
-    .hero h1 {
-        font-family: 'Orbitron', monospace;
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 0.3rem;
-        color: var(--primary-color);
-        letter-spacing: 2px;
-        animation: neonGlow 3s ease-in-out infinite alternate;
-        text-shadow: 0 0 15px var(--primary-color);
-    }
-
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-        color: var(--secondary-color);
-        text-shadow: 0 0 10px var(--secondary-color);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Services Section */
-    .services {
-        padding: 0.8rem 0;
-        background: rgba(0, 0, 0, 0.8);
-        position: relative;
-    }
-
-    .services::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(0, 255, 255, 0.03) 2px,
-                rgba(0, 255, 255, 0.03) 4px
-            );
-        pointer-events: none;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-top: 0.5rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .service-card {
-        background: var(--card-background);
-        padding: 1rem;
-        border: 2px solid var(--neon-blue);
-        border-radius: 0;
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 
-            0 0 20px rgba(0, 191, 255, 0.3),
-            inset 0 0 20px rgba(0, 191, 255, 0.1);
-    }
-
-    .service-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px) scale(1.01);
-        border: 2px solid var(--secondary-color);
-        box-shadow: 
-            0 5px 20px rgba(0, 255, 255, 0.4),
-            inset 0 0 15px rgba(0, 255, 255, 0.1);
-    }
-
-    .service-card:hover::before {
-        opacity: 1;
-    }
-
-    .service-card i {
-        font-size: 2rem;
-        color: var(--neon-green);
-        margin-bottom: 0.5rem;
-        text-shadow: 0 0 15px var(--neon-green);
-        animation: neonGlow 3s ease-in-out infinite alternate;
-    }
-
-    .service-card h3 {
-        font-family: 'Orbitron', monospace;
-        color: var(--secondary-color);
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-shadow: 0 0 8px var(--secondary-color);
-    }
-
-    .service-card p {
-        color: var(--text-color);
-        font-size: 0.85rem;
-        line-height: 1.4;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-
-    /* Contact Section */
-    .contact {
-        padding: 0.8rem 0 0.2rem;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.9);
-        position: relative;
-    }
-
-    .contact::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            radial-gradient(circle at 25% 25%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 75% 75%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-        pointer-events: none;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        max-width: 500px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-    }
-
-    .contact-card {
-        background: var(--card-background);
-        padding: 1rem 1.5rem;
-        border: none;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 
-            0 0 20px rgba(255, 20, 147, 0.3),
-            inset 0 0 20px rgba(255, 20, 147, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .contact-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: conic-gradient(from 0deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
-        animation: rotate 4s linear infinite;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    @keyframes rotate {
-        100% { transform: rotate(360deg); }
-    }
-
-    .contact-card:hover::before {
-        opacity: 0.1;
-    }
-
-    .contact-card:hover {
-        transform: scale(1.05);
-        box-shadow: 
-            0 0 30px rgba(255, 20, 147, 0.6),
-            inset 0 0 30px rgba(255, 20, 147, 0.2);
-    }
-
-    .contact-card i {
-        font-size: 1.5rem;
-        color: var(--neon-pink);
-        margin-bottom: 0.5rem;
-        text-shadow: 0 0 15px var(--neon-pink);
-        animation: neonGlow 3s ease-in-out infinite alternate;
-    }
-
-    .contact-card h3 {
-        font-family: 'Orbitron', monospace;
-        color: var(--accent-color);
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-shadow: 0 0 8px var(--accent-color);
-    }
-
-    .contact-card p {
-        color: var(--text-color);
-        font-size: 0.9rem;
-    }
-
-    .contact-card a {
-        color: var(--secondary-color);
-        text-decoration: none;
-        text-shadow: 0 0 10px var(--secondary-color);
-        transition: all 0.3s ease;
-    }
-
-    .contact-card a:hover {
-        color: var(--primary-color);
-        text-shadow: 0 0 15px var(--primary-color);
-    }
-
-    /* Footer */
-    footer {
-        background: rgba(0, 0, 0, 0.95);
-        color: var(--text-color);
-        padding: 0.4rem 0 0.2rem;
-        border-top: 2px solid var(--primary-color);
-        box-shadow: 0 0 20px var(--primary-color);
-        position: relative;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0.2rem;
-        text-align: center;
-    }
-
-    .footer-info h3 {
-        font-family: 'Orbitron', monospace;
-        color: var(--primary-color);
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-shadow: 0 0 10px var(--primary-color);
-    }
-
-    .footer-info p {
-        color: var(--secondary-color);
-        text-shadow: 0 0 5px var(--secondary-color);
-    }
-
-    .footer-bottom {
-        text-align: center;
-        padding-top: 0.2rem;
-        border-top: 1px solid var(--grid-color);
-    }
-
-    .footer-bottom p {
-        color: var(--text-color);
-        font-family: 'Share Tech Mono', monospace;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(10px);
-    }
-
-    .modal-content {
-        background: var(--card-background);
-        margin: 5% auto;
-        padding: 2rem;
-        border: 2px solid var(--primary-color);
-        width: 90%;
-        max-width: 600px;
-        position: relative;
-        box-shadow: 
-            0 0 30px var(--primary-color),
-            inset 0 0 30px rgba(255, 0, 255, 0.1);
-    }
-
-    .modal-content h2 {
-        font-family: 'Orbitron', monospace;
-        color: var(--primary-color);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-shadow: 0 0 10px var(--primary-color);
-        margin-bottom: 1.5rem;
-    }
-
-    .close-modal {
-        color: var(--neon-pink);
-        float: right;
-        font-size: 2rem;
-        font-weight: bold;
-        cursor: pointer;
-        background: none;
-        border: none;
-        text-shadow: 0 0 10px var(--neon-pink);
-        transition: all 0.3s ease;
-    }
-
-    .close-modal:hover {
-        color: var(--accent-color);
-        text-shadow: 0 0 15px var(--accent-color);
-        transform: scale(1.2);
-    }
-
-    .company-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin-top: 1rem;
-    }
-
-    .info-section h3 {
-        font-family: 'Orbitron', monospace;
-        color: var(--secondary-color);
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-shadow: 0 0 10px var(--secondary-color);
-    }
-
-    .info-section p, .info-section address {
-        color: var(--text-color);
-        line-height: 1.6;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    }
-
-    .info-section address {
-        font-style: normal;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .services-grid {
-            grid-template-columns: repeat(2, 1fr);
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
         }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-    }
 
-    @media (max-width: 768px) {
-        .nav-toggle {
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            text-rendering: optimizeLegibility;
+            min-height: 100vh;
+        }
+
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--accent);
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            background: var(--accent);
+            color: var(--surface);
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg);
+            border-bottom: 2px solid var(--border);
+            box-shadow: 0 6px 0 var(--border);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 3vw, 2.5rem);
+        }
+
+        .nav-container {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            min-height: var(--header-height);
+        }
+
+        .brand {
+            display: inline-flex;
+            flex-direction: column;
+            font-family: 'IBM Plex Mono', monospace;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .brand span:last-child {
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            padding: 0.625rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--border);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-toggle span + span {
+            margin-top: 6px;
         }
 
         .nav-links {
-            position: fixed;
-            top: 80px;
-            left: -100%;
-            width: 100%;
-            height: calc(100vh - 80px);
-            background: rgba(0, 0, 0, 0.95);
-            flex-direction: column;
-            justify-content: flex-start;
+            display: flex;
             align-items: center;
-            padding-top: 2rem;
-            transition: left 0.3s ease;
-            border-top: 2px solid var(--primary-color);
+            gap: 1.25rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.08em;
         }
 
-        .nav-links.active {
-            left: 0;
+        .nav-links a {
+            text-decoration: none;
+            padding: 0.6rem 0.8rem;
+            border: 2px solid var(--border);
+            background: transparent;
+            box-shadow: 6px 6px 0 var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            transform: translate(-3px, -3px);
+            background: var(--surface-strong);
+            box-shadow: 9px 9px 0 var(--border);
+        }
+
+        .nav-links .cta-link {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .nav-links .cta-link:hover,
+        .nav-links .cta-link:focus-visible {
+            background: var(--accent-strong);
+            color: var(--surface);
+        }
+
+        main {
+            display: block;
+        }
+
+        section {
+            padding: clamp(4rem, 10vw, 7rem) 0;
+            position: relative;
+        }
+
+        section:target {
+            scroll-margin-top: calc(var(--header-height) + 2rem);
+        }
+
+        .eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--accent-strong);
+        }
+
+        .section-header {
+            max-width: 780px;
+            margin-bottom: clamp(2rem, 5vw, 3rem);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            line-height: 1.1;
+            margin: 0 0 1rem;
+        }
+
+        .section-header p {
+            font-size: clamp(1rem, 2.8vw, 1.25rem);
+            color: var(--muted);
+            margin: 0;
         }
 
         .hero {
-            padding: 0.5rem 0 0.3rem;
+            padding-top: clamp(6rem, 10vw, 8rem);
+            background: var(--surface);
+            border-bottom: 2px solid var(--border);
         }
 
-        .hero h1 {
-            font-size: 2rem;
-            letter-spacing: 2px;
+        .hero-container {
+            display: grid;
+            gap: clamp(2.5rem, 6vw, 4rem);
+            grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+            align-items: stretch;
         }
 
-        .services-grid {
-            grid-template-columns: 1fr;
+        .hero-copy h1 {
+            font-size: clamp(2.6rem, 6vw, 4rem);
+            line-height: 1.05;
+            margin: 0 0 1.25rem;
+        }
+
+        .hero-lede {
+            font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+            color: var(--muted);
+            margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: clamp(2rem, 5vw, 3rem);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.5rem;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .button.primary {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .button.ghost {
+            background: var(--surface-strong);
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translate(-4px, -4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .hero-proof {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .proof-item {
+            border: 2px solid var(--border);
+            padding: 1rem;
+            background: var(--surface-accent);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 0.35rem;
+        }
+
+        .proof-number {
+            font-size: 1.9rem;
+            font-weight: 700;
+        }
+
+        .proof-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-note {
+            border: 2px solid var(--border);
+            background: var(--surface-strong);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-note h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .hero-note ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .hero-note li {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .hero-note-footnote {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: auto;
+        }
+
+        .credibility {
+            background: var(--surface-accent);
+            border-bottom: 2px solid var(--border);
+        }
+
+        .credibility-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .credibility-list li {
+            border: 2px solid var(--border);
+            padding: 0.75rem 1rem;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .card-grid {
+            display: grid;
             gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         }
 
-        .company-info {
-            grid-template-columns: 1fr;
+        .card {
+            border: 2px solid var(--border);
+            background: var(--surface);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover,
+        .card:focus-within {
+            transform: translate(-6px, -6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .card ul li::before {
+            content: '+';
+            margin-right: 0.75rem;
+            color: var(--accent);
+        }
+
+        .approach {
+            background: var(--surface);
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+
+        .approach-steps {
+            counter-reset: step;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 1.75rem;
+        }
+
+        .approach-steps li {
+            counter-increment: step;
+            border: 2px solid var(--border);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            background: var(--surface-accent);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .approach-steps li::before {
+            content: counter(step);
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.2rem;
+            background: var(--accent-soft);
+            border: 2px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .approach-steps h3 {
+            margin: 0 0 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .approach-detail {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .case-grid {
+            display: grid;
             gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
-        .modal-content {
-            margin: 10% auto;
-            padding: 1.5rem;
+        .case-card {
+            border: 2px solid var(--border);
+            background: var(--surface);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .case-metric {
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            color: var(--accent-strong);
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        .case-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .case-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .case-card ul li::before {
+            content: '>';
+            margin-right: 0.75rem;
+            color: var(--accent);
+        }
+
+        .insights-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .insight-card {
+            border: 2px solid var(--border);
+            background: var(--surface-accent);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .insight-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.6rem;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .insight-card ul li::before {
+            content: '#';
+            margin-right: 0.75rem;
+            color: var(--border);
+        }
+
+        .collab {
+            background: var(--surface-strong);
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+
+        .collab-card {
+            border: 2px solid var(--border);
+            box-shadow: var(--shadow);
+            background: var(--surface);
+            padding: clamp(2rem, 4vw, 3rem);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .collab-card h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
+        .collab-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact {
+            background: var(--surface);
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         }
 
         .contact-card {
-            padding: 1rem 1.5rem;
+            border: 2px solid var(--border);
+            background: var(--surface-accent);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 0.75rem;
         }
-    }
+
+        .contact-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .contact-card a {
+            text-decoration: none;
+            color: var(--border);
+            font-weight: 600;
+        }
+
+        .contact-card a:hover,
+        .contact-card a:focus-visible {
+            color: var(--accent);
+        }
+
+        .faq {
+            background: var(--surface-accent);
+            border-top: 2px solid var(--border);
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        details {
+            border: 2px solid var(--border);
+            background: var(--surface);
+            padding: 1rem 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        summary {
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary {
+            color: var(--accent);
+        }
+
+        details p {
+            margin-top: 0.8rem;
+            color: var(--muted);
+        }
+
+        footer {
+            border-top: 2px solid var(--border);
+            background: var(--surface);
+            padding: clamp(2rem, 4vw, 3rem) 0;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .footer-nav {
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 980px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-note {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .nav-toggle {
+                display: inline-flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                right: 0;
+                left: 0;
+                flex-direction: column;
+                align-items: stretch;
+                background: var(--bg);
+                padding: 2rem clamp(1rem, 4vw, 3rem);
+                border-top: 2px solid var(--border);
+                border-bottom: 2px solid var(--border);
+                transform: translateY(-130%);
+                transition: transform 0.3s ease;
+                box-shadow: 0 12px 0 var(--border);
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.is-open {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .proof-item {
+                text-align: center;
+            }
+
+            .credibility-list {
+                flex-direction: column;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
     </style>
-    
-    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DeployHelp OÜ",
+      "@type": "ProfessionalService",
+      "name": "DEPLOYHELP LLC",
       "url": "https://deployhelp.com",
       "logo": "https://deployhelp.com/favicon.svg",
-      "description": "AI-Driven Customer Support Solutions. Transform your customer experience with our comprehensive support implementation, business process automation, and analytics services.",
+      "description": "Neobrutalist customer support consulting helping product-led companies modernize CX, adopt AI, and operationalize frontline teams.",
       "email": "contact@deployhelp.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sepapaja tn 6",
-        "addressLocality": "Tallinn",
-        "postalCode": "15551",
-        "addressRegion": "Harju Maakond",
-        "addressCountry": "EE"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Vahe Khumaryan",
-        "jobTitle": "Founder"
-      },
-      "sameAs": [],
+      "sameAs": [
+        "https://www.linkedin.com/company/deployhelp"
+      ],
+      "areaServed": "Global",
       "serviceType": [
-        "AI Integration",
-        "Team Training", 
-        "Process Optimization",
-        "Automation",
-        "Process Mapping",
-        "Analytics & Reporting"
+        "Support systems architecture",
+        "AI adoption sprints",
+        "Support automation",
+        "Team enablement",
+        "Support analytics"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of teams does DEPLOYHELP partner with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with venture-backed and private equity-backed product organizations that are scaling support across SaaS, fintech, marketplace, and future-of-work categories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can an AI-enabled support channel go live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most engagements move from diagnostic to live AI-enabled workflows in four to six weeks, including experimentation, knowledge orchestration, and frontline training."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer fractional leadership support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. DEPLOYHELP provides fractional CX leadership to embed with your team, set operating rhythms, develop managers, and keep strategy aligned with customer outcomes."
+          }
+        }
       ]
     }
     </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="container">
-                <a href="/" class="logo" aria-label="DeployHelp Home">DeployHelp</a>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-links">
-                    <a href="#" id="about-link">About</a>
-                </nav>
-            </div>
-        </nav>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+        <div class="container nav-container">
+            <a class="brand" href="/" aria-label="DEPLOYHELP home">
+                <span>DEPLOYHELP</span>
+                <span>LLC</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="primaryNav" aria-label="Primary navigation">
+                <a href="#services">Services</a>
+                <a href="#approach">Approach</a>
+                <a href="#work">Work</a>
+                <a href="#insights">Insights</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="cta-link">Start a project</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <h1 id="hero-title">AI-Driven Customer Support Transformation</h1>
-                <p>We are the strike team for customer support excellence. Delivering comprehensive solutions that transform customer experience.</p>
+    <main id="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="container hero-container">
+                <div class="hero-copy">
+                    <p class="eyebrow">Customer support and automation consulting</p>
+                    <h1 id="hero-title">DEPLOYHELP builds bold, AI-ready support operations customers remember for the right reasons.</h1>
+                    <p class="hero-lede">We pair deep CX operations expertise with modern automation to help product-led teams launch new channels, integrate AI copilots, and coach frontline leaders without sacrificing the human touch.</p>
+                    <div class="hero-cta" role="group" aria-label="Primary calls to action">
+                        <a class="button primary" href="mailto:contact@deployhelp.com?subject=Project%20Inquiry%20-%20DEPLOYHELP">Book a discovery call</a>
+                        <a class="button ghost" href="#services">See capabilities</a>
+                    </div>
+                    <div class="hero-proof" role="list">
+                        <div class="proof-item" role="listitem">
+                            <span class="proof-number">4-6</span>
+                            <span class="proof-label">weeks to stand up a new channel</span>
+                        </div>
+                        <div class="proof-item" role="listitem">
+                            <span class="proof-number">30%</span>
+                            <span class="proof-label">average cost saved via automation</span>
+                        </div>
+                        <div class="proof-item" role="listitem">
+                            <span class="proof-number">95%</span>
+                            <span class="proof-label">CSAT maintained through transformation</span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="hero-note" aria-label="DEPLOYHELP focus areas">
+                    <h2>Where we plug in</h2>
+                    <ul>
+                        <li>AI copilots and knowledge orchestration</li>
+                        <li>Omnichannel tooling selection and roll-out</li>
+                        <li>Team rituals, QA, and enablement design</li>
+                        <li>Executive-ready support analytics</li>
+                    </ul>
+                    <p class="hero-note-footnote">Fractional leadership for high-growth SaaS, fintech, developer tools, and marketplace teams.</p>
+                </aside>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
+        <section class="section credibility" id="credibility">
             <div class="container">
-                <div class="services-grid">
-                    <article class="service-card">
-                        <i class="fas fa-robot" aria-hidden="true"></i>
-                        <h3>AI Integration</h3>
-                        <p>Seamlessly integrate AI solutions into your customer support workflow, enhancing efficiency and response times.</p>
+                <p class="eyebrow">Operating partners</p>
+                <ul class="credibility-list">
+                    <li>Seed to Series D SaaS scale-ups</li>
+                    <li>Automation-forward support leaders</li>
+                    <li>Global support hubs and BPO partners</li>
+                    <li>AI tooling and CX platform teams</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section services" id="services" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Capabilities</p>
+                    <h2 id="services-title">Go-to-market support architecture delivered in weeks, not quarters.</h2>
+                    <p>Every engagement blends strategy, build, and enablement so your team owns the outcomes long after launch.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Support systems architecture</h3>
+                        <p>Design the backbone of your support org &mdash; channels, routing, SLAs, knowledge, and escalation logic &mdash; built for clarity and scale.</p>
+                        <ul>
+                            <li>Stack evaluation and implementation sequencing</li>
+                            <li>Playbooks and governance templates</li>
+                            <li>Change management and rollout planning</li>
+                        </ul>
                     </article>
-                    <article class="service-card">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                        <h3>Team Training</h3>
-                        <p>Comprehensive training programs to ensure your team is equipped with the latest customer support technologies and best practices.</p>
+                    <article class="card">
+                        <h3>AI adoption sprints</h3>
+                        <p>Move from experimentation to measurable impact with copilots, generative answers, and assisted workflows your agents trust.</p>
+                        <ul>
+                            <li>Knowledge orchestration and prompt design</li>
+                            <li>Guardrails, QA, and compliance checkpoints</li>
+                            <li>Runbooks for continuous tuning</li>
+                        </ul>
                     </article>
-                    <article class="service-card">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        <h3>Process Optimization</h3>
-                        <p>Streamline your customer support processes for maximum efficiency and customer satisfaction.</p>
+                    <article class="card">
+                        <h3>Global team activation</h3>
+                        <p>Upskill managers, specialists, and vendors through rituals that align quality, efficiency, and customer sentiment.</p>
+                        <ul>
+                            <li>Team competency frameworks and scorecards</li>
+                            <li>QA, coaching, and stand-up cadences</li>
+                            <li>Onboarding accelerators for new hires</li>
+                        </ul>
                     </article>
-                    <article class="service-card">
-                        <i class="fas fa-cogs" aria-hidden="true"></i>
-                        <h3>Automation</h3>
-                        <p>Implement automated workflows and responses to handle routine customer inquiries efficiently.</p>
+                    <article class="card">
+                        <h3>Automation and workflow engineering</h3>
+                        <p>Build automations that actually resolve work: triage, tagging, nudges, and internal tools that keep humans on high-value conversations.</p>
+                        <ul>
+                            <li>Process mapping and systems instrumentation</li>
+                            <li>No-code and low-code workflow builds</li>
+                            <li>Measurement dashboards and alerts</li>
+                        </ul>
                     </article>
-                    <article class="service-card">
-                        <i class="fas fa-map" aria-hidden="true"></i>
-                        <h3>Process Mapping</h3>
-                        <p>Create detailed process maps to visualize and optimize your customer support workflows.</p>
-                    </article>
-                    <article class="service-card">
-                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                        <h3>Analytics & Reporting</h3>
-                        <p>Gain valuable insights through comprehensive analytics and detailed performance reports.</p>
+                    <article class="card">
+                        <h3>Fractional CX leadership</h3>
+                        <p>Embed experienced leadership to steer your CX roadmap, align executive stakeholders, and guide hiring until you are ready to in-house.</p>
+                        <ul>
+                            <li>OKR design and operating rhythm setup</li>
+                            <li>Executive-ready reporting and board packs</li>
+                            <li>Hiring plans, interviews, and onboarding</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <section class="section approach" id="approach" aria-labelledby="approach-title">
             <div class="container">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <h3>Email Us</h3>
-                        <p><a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a></p>
+                <div class="section-header">
+                    <p class="eyebrow">How we work</p>
+                    <h2 id="approach-title">A zero-fluff four phase model that respects your velocity.</h2>
+                    <p>We plug into your stand-ups, ops reviews, and customer feedback loops so we ship with your team, not at them.</p>
+                </div>
+                <ol class="approach-steps">
+                    <li>
+                        <h3>Pattern match and diagnose</h3>
+                        <p>Rapid discovery across customers, data, and workflows to identify the moments that matter most and the friction that slows teams down.</p>
+                        <span class="approach-detail">Artifacts: CX baseline report, automation backlog, stakeholder map.</span>
+                    </li>
+                    <li>
+                        <h3>Design the operating system</h3>
+                        <p>Translate insights into a neobrutalist support blueprint: service design, playbooks, policies, and tooling decisions that are impossible to misinterpret.</p>
+                        <span class="approach-detail">Artifacts: support blueprint, KPI tree, implementation plan.</span>
+                    </li>
+                    <li>
+                        <h3>Deploy and coach</h3>
+                        <p>Stand up systems, ship automations, and stay in the trenches with your team through enablement sessions, QA reviews, and executive checkpoints.</p>
+                        <span class="approach-detail">Artifacts: go-live checklist, training tracks, executive dashboards.</span>
+                    </li>
+                    <li>
+                        <h3>Measure and iterate</h3>
+                        <p>Instrument performance, capture feedback, and create an improvement backlog that keeps momentum without us in the room.</p>
+                        <span class="approach-detail">Artifacts: analytics pack, experimentation roadmap, playbook updates.</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section work" id="work" aria-labelledby="work-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Selected engagements</p>
+                    <h2 id="work-title">Outcomes we thrive on.</h2>
+                    <p>Every project pairs measurable impact with a confident team ready to scale the results.</p>
+                </div>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <p class="case-metric">+112% self-serve resolution</p>
+                        <h3>AI knowledge layer for B2B SaaS</h3>
+                        <p>Architected a retrieval-augmented knowledge base and guided agents through prompt engineering, cutting escalations in half within two cycles.</p>
+                        <ul>
+                            <li>Retained tone and compliance guardrails</li>
+                            <li>Built red-team and regression protocols</li>
+                            <li>Shipped live tuning workshops</li>
+                        </ul>
+                    </article>
+                    <article class="case-card">
+                        <p class="case-metric">-35% handle time</p>
+                        <h3>Omnichannel launch for fintech ops</h3>
+                        <p>Centralized email, chat, and voice in six weeks, introduced automation for underwriting triage, and built scorecards for distributed vendor teams.</p>
+                        <ul>
+                            <li>24/7 routing and service tiering</li>
+                            <li>Unified analytics with executive dashboards</li>
+                            <li>Compliance audit and documentation pack</li>
+                        </ul>
+                    </article>
+                    <article class="case-card">
+                        <p class="case-metric">NPS +22 within quarter</p>
+                        <h3>Fractional CX leadership for climate tech</h3>
+                        <p>Stabilized post-series B support during hyper-growth, introduced rituals, hired managers, and set up continuous insight loops for product.</p>
+                        <ul>
+                            <li>Leadership enablement and hiring playbook</li>
+                            <li>Voice-of-customer insights fuel product roadmap</li>
+                            <li>Experimentation backlog tied to company OKRs</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section insights" id="insights" aria-labelledby="insights-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Operating principles</p>
+                    <h2 id="insights-title">What makes DEPLOYHELP different.</h2>
+                </div>
+                <div class="insights-grid">
+                    <article class="insight-card">
+                        <h3>Design for clarity</h3>
+                        <ul>
+                            <li>Neobrutalist systems make responsibilities obvious.</li>
+                            <li>Every artifact earns its space by solving a specific friction.</li>
+                            <li>We document in plain language your team can ship with.</li>
+                        </ul>
+                    </article>
+                    <article class="insight-card">
+                        <h3>Bias to action</h3>
+                        <ul>
+                            <li>Weekly demos tie strategy to working prototypes.</li>
+                            <li>Automation is measured against customer outcomes, not novelty.</li>
+                            <li>Leaders leave with a playbook and a plan for the next 90 days.</li>
+                        </ul>
+                    </article>
+                    <article class="insight-card">
+                        <h3>Humans at the center</h3>
+                        <ul>
+                            <li>AI augments the team; it never hides accountability.</li>
+                            <li>Enablement is built with the people doing the work.</li>
+                            <li>We build feedback loops that customers can feel.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section collab" aria-labelledby="collab-title">
+            <div class="container">
+                <div class="collab-card">
+                    <p class="eyebrow">Let us build together</p>
+                    <h2 id="collab-title">Ready for a support organization that scales with product ambition?</h2>
+                    <p>We bring the frameworks, workshops, and leadership muscle. You bring the vision and your sharpest operators. Together we ship customer experiences people rave about.</p>
+                    <div class="collab-actions">
+                        <a class="button primary" href="mailto:contact@deployhelp.com?subject=Discovery%20Call%20Request%20-%20DEPLOYHELP">Start a project</a>
+                        <a class="button ghost" href="#faq">Read the FAQ</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Contact</p>
+                    <h2 id="contact-title">Two ways to get moving right now.</h2>
+                    <p>Pick whichever path gets you to value fastest. We reply within one business day.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Email</h3>
+                        <p>Share a few lines about your support goals and current stack.</p>
+                        <a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Workshop request</h3>
+                        <p>Book a 60-minute working session to diagnose your top CX friction point.</p>
+                        <a href="mailto:contact@deployhelp.com?subject=Workshop%20Request%20-%20DEPLOYHELP">Schedule a workshop</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Signal boost</h3>
+                        <p>Follow along as we share playbooks, templates, and what we are shipping next.</p>
+                        <a href="https://www.linkedin.com/company/deployhelp" rel="noopener" target="_blank">LinkedIn updates</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">FAQ</p>
+                    <h2 id="faq-title">Answers to the questions teams ask before partnering.</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>What industries does DEPLOYHELP focus on?</summary>
+                        <p>We partner primarily with SaaS, fintech, developer tools, and marketplace companies that are ready to instrument their support organization and lean into AI-powered workflows. If your team ships product fast, we are built for you.</p>
+                    </details>
+                    <details>
+                        <summary>Can you integrate with our existing support stack?</summary>
+                        <p>Yes. We regularly work with Zendesk, Intercom, Salesforce, Front, Help Scout, and bespoke internal tools. Our job is to make the tech you already have perform better before you invest in net-new platforms.</p>
+                    </details>
+                    <details>
+                        <summary>What does a typical engagement look like?</summary>
+                        <p>Engagements run 8-10 weeks. We begin with a diagnostic, align on the blueprint, co-deliver releases in two-week sprints, and finish with enablement plus an improvement backlog so your team can keep iterating.</p>
+                    </details>
+                    <details>
+                        <summary>Do you collaborate with internal product or engineering teams?</summary>
+                        <p>Absolutely. Customer support transformation touches product, engineering, and data. We embed into their ceremonies to ensure customer insights influence roadmaps and automation connects to core systems.</p>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Company Info Modal -->
-    <div id="companyModal" class="modal" role="dialog" aria-labelledby="modal-title">
-        <div class="modal-content">
-            <button class="close-modal" aria-label="Close modal">&times;</button>
-            <h2 id="modal-title">About DeployHelp</h2>
-            <div class="company-info">
-                <div class="info-section">
-                    <h3>Company</h3>
-                    <p>DeployHelp OÜ<br>Registry code: 16712345</p>
-                    <address>
-                        Sepapaja tn 6<br>
-                        15551 Tallinn<br>
-                        Harju Maakond, Estonia
-                    </address>
-                </div>
-                <div class="info-section">
-                    <h3>People</h3>
-                    <p>Vahe Khumaryan, Founder<br><br>CS expert with 10+ years of experience, specialising in software administration & automation.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>DeployHelp</h3>
-                    <p>Transforming customer support through AI and human expertise.</p>
+            <div class="footer-top">
+                <div class="footer-brand">DEPLOYHELP LLC</div>
+                <div class="footer-nav">
+                    <a href="#services">Services</a>
+                    <a href="#approach">Approach</a>
+                    <a href="#work">Work</a>
+                    <a href="#contact">Contact</a>
+                    <a href="mailto:contact@deployhelp.com">Email us</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 DeployHelp. All rights reserved.</p>
+                <span>&copy; <span id="currentYear"></span> DEPLOYHELP LLC</span>
+                <span>Customer support consulting built on bold design and measurable outcomes.</span>
             </div>
         </div>
     </footer>
 
     <script>
-    // Mobile Navigation Toggle
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const navToggle = document.getElementById('navToggle');
-        const navLinks = document.querySelector('.nav-links');
+        const primaryNav = document.getElementById('primaryNav');
+        const navLinks = primaryNav ? primaryNav.querySelectorAll('a') : [];
 
-        if (navToggle && navLinks) {
+        if (navToggle && primaryNav) {
             navToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                navToggle.setAttribute('aria-expanded', 
-                    navToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-                );
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                primaryNav.classList.toggle('is-open');
+                document.body.classList.toggle('nav-open', !expanded);
             });
 
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (navToggle && navLinks && 
-                    !navToggle.contains(e.target) && 
-                    !navLinks.contains(e.target)) {
-                    navLinks.classList.remove('active');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    primaryNav.classList.remove('is-open');
                     navToggle.setAttribute('aria-expanded', 'false');
-                }
+                    document.body.classList.remove('nav-open');
+                });
             });
         }
 
-        // Modal functionality
-        const aboutLink = document.getElementById('about-link');
-        const modal = document.getElementById('companyModal');
-        const closeModal = document.querySelector('.close-modal');
-
-        if (aboutLink && modal && closeModal) {
-            // Open modal
-            aboutLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                modal.style.display = 'flex';
-                modal.style.opacity = '1';
-                modal.querySelector('.modal-content').style.transform = 'translateY(0)';
-            });
-
-            // Close modal with X button
-            closeModal.addEventListener('click', function() {
-                modal.style.opacity = '0';
-                modal.querySelector('.modal-content').style.transform = 'translateY(-20px)';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
-            });
-
-            // Close modal when clicking outside
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.opacity = '0';
-                    modal.querySelector('.modal-content').style.transform = 'translateY(-20px)';
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                    }, 300);
-                }
-            });
+        const currentYear = document.getElementById('currentYear');
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
         }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#about') return; // Skip for about link
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu after clicking a link
-                    if (navLinks) {
-                        navLinks.classList.remove('active');
-                    }
-                }
-            });
-        });
-
-        // Update copyright year
-        const yearSpan = document.getElementById('currentYear');
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Add scroll-based animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.service-card').forEach(card => {
-            observer.observe(card);
-        });
     });
     </script>
 </body>
