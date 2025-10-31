@@ -352,10 +352,197 @@
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
+    /* CTA Buttons */
+    .hero-cta {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        font-family: 'Orbitron', monospace;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 2px solid;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+
+    .cta-button.primary {
+        background: var(--primary-color);
+        color: var(--background);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 20px var(--primary-color);
+        text-shadow: none;
+    }
+
+    .cta-button.primary:hover {
+        background: transparent;
+        color: var(--primary-color);
+        box-shadow: 0 0 30px var(--primary-color), inset 0 0 20px rgba(255, 0, 255, 0.2);
+        text-shadow: 0 0 10px var(--primary-color);
+        transform: translateY(-2px);
+    }
+
+    .cta-button.secondary {
+        background: transparent;
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 15px var(--secondary-color);
+        text-shadow: 0 0 5px var(--secondary-color);
+    }
+
+    .cta-button.secondary:hover {
+        background: var(--secondary-color);
+        color: var(--background);
+        box-shadow: 0 0 25px var(--secondary-color);
+        text-shadow: none;
+        transform: translateY(-2px);
+    }
+
+    /* Section Title */
+    .section-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-align: center;
+        margin-bottom: 2rem;
+        letter-spacing: 2px;
+        text-shadow: 0 0 15px var(--secondary-color);
+        text-transform: uppercase;
+    }
+
+    /* Success Section */
+    .success-section {
+        padding: 4rem 0;
+        background: rgba(0, 0, 0, 0.9);
+        position: relative;
+    }
+
+    .success-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(57, 255, 20, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .metric-card {
+        background: var(--card-background);
+        padding: 2rem;
+        text-align: center;
+        border: 2px solid var(--neon-green);
+        box-shadow: 
+            0 0 20px rgba(57, 255, 20, 0.3),
+            inset 0 0 20px rgba(57, 255, 20, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+            0 5px 30px rgba(57, 255, 20, 0.5),
+            inset 0 0 30px rgba(57, 255, 20, 0.2);
+    }
+
+    .metric-value {
+        font-family: 'Orbitron', monospace;
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--neon-green);
+        text-shadow: 0 0 20px var(--neon-green);
+        margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+        font-size: 1rem;
+        color: var(--text-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .testimonial-card {
+        background: var(--card-background);
+        padding: 2rem;
+        border: 2px solid var(--neon-pink);
+        box-shadow: 
+            0 0 20px rgba(255, 20, 147, 0.3),
+            inset 0 0 20px rgba(255, 20, 147, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+            0 5px 30px rgba(255, 20, 147, 0.5),
+            inset 0 0 30px rgba(255, 20, 147, 0.2);
+    }
+
+    .testimonial-content {
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-content p {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.6;
+        font-style: italic;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
+    .testimonial-author {
+        color: var(--secondary-color);
+        text-shadow: 0 0 10px var(--secondary-color);
+    }
+
+    .testimonial-author strong {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.1rem;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .testimonial-author span {
+        font-size: 0.9rem;
+        color: var(--text-color);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
     /* Contact Section */
     .contact {
-        padding: 0.8rem 0 0.2rem;
-        text-align: center;
+        padding: 4rem 0 2rem;
         background: rgba(0, 0, 0, 0.9);
         position: relative;
     }
@@ -371,6 +558,69 @@
             radial-gradient(circle at 25% 25%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
             radial-gradient(circle at 75% 75%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
         pointer-events: none;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3rem;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-form-container {
+        background: var(--card-background);
+        padding: 2rem;
+        border: 2px solid var(--secondary-color);
+        box-shadow: 
+            0 0 20px rgba(0, 255, 255, 0.3),
+            inset 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        font-family: 'Orbitron', monospace;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        text-shadow: 0 0 10px var(--secondary-color);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid var(--grid-color);
+        color: var(--text-color);
+        padding: 0.75rem;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        background: rgba(0, 255, 255, 0.05);
+    }
+
+    .contact-info-side {
+        display: flex;
+        flex-direction: column;
     }
 
     .contact-info {
@@ -502,6 +752,26 @@
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .social-links a {
+        color: var(--secondary-color);
+        font-size: 2rem;
+        text-shadow: 0 0 10px var(--secondary-color);
+        transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: var(--primary-color);
+        text-shadow: 0 0 15px var(--primary-color);
+        transform: translateY(-3px);
+    }
+
     /* Modal */
     .modal {
         display: none;
@@ -587,12 +857,45 @@
             grid-template-columns: repeat(2, 1fr);
         }
         
+        .metrics-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .testimonials-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
         .hero h1 {
             font-size: 2.5rem;
         }
     }
 
     @media (max-width: 768px) {
+        .hero-cta {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-button {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .metrics-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-wrapper {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
         .nav-toggle {
             display: flex;
         }
@@ -693,6 +996,9 @@
                     <span></span>
                 </button>
                 <nav class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#success">Success Stories</a>
+                    <a href="#contact">Contact</a>
                     <a href="#" id="about-link">About</a>
                 </nav>
             </div>
@@ -705,6 +1011,10 @@
             <div class="container">
                 <h1 id="hero-title">AI-Driven Customer Support Transformation</h1>
                 <p>We are the strike team for customer support excellence. Delivering comprehensive solutions that transform customer experience.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-button primary">Get Started</a>
+                    <a href="#services" class="cta-button secondary">Our Services</a>
+                </div>
             </div>
         </section>
 
@@ -746,14 +1056,99 @@
             </div>
         </section>
 
+        <!-- Success Metrics Section -->
+        <section id="success" class="success-section">
+            <div class="container">
+                <h2 class="section-title">Proven Results</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">10+</div>
+                        <div class="metric-label">Years Experience</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">50+</div>
+                        <div class="metric-label">Clients Served</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">95%</div>
+                        <div class="metric-label">Client Satisfaction</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Avg Cost Reduction</div>
+                    </div>
+                </div>
+                
+                <h2 class="section-title" style="margin-top: 3rem;">Client Success Stories</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>\"DeployHelp transformed our support operations. Response times dropped by 60% while customer satisfaction increased dramatically.\"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Sarah Johnson</strong><br>
+                            <span>VP of Operations, TechCorp</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>\"The AI integration was seamless. Our team adapted quickly, and we're now handling 3x the volume with the same headcount.\"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Michael Chen</strong><br>
+                            <span>CTO, CloudServices Inc</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>\"Best investment we've made. The ROI was clear within 3 months, and our support team is more empowered than ever.\"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Emma Rodriguez</strong><br>
+                            <span>Customer Success Lead, StartupXYZ</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <h3>Email Us</h3>
-                        <p><a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a></p>
+                <h2 class="section-title">Let's Transform Your Support</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell us about your needs</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-side">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a></p>
+                        </div>
+                        <div class="contact-card" style="margin-top: 1.5rem;">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <h3>Schedule a Call</h3>
+                            <p>Book a free 30-minute consultation to discuss your support transformation needs.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -791,6 +1186,17 @@
                     <h3>DeployHelp</h3>
                     <p>Transforming customer support through AI and human expertise.</p>
                 </div>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/company/deployhelp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/deployhelp" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/deployhelp" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 DeployHelp. All rights reserved.</p>
@@ -876,6 +1282,41 @@
                 }
             });
         });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    company: formData.get('company'),
+                    message: formData.get('message')
+                };
+
+                // Create mailto link with form data
+                const subject = encodeURIComponent(`Contact from ${data.name}${data.company ? ' - ' + data.company : ''}`);
+                const body = encodeURIComponent(
+                    `Name: ${data.name}\n` +
+                    `Email: ${data.email}\n` +
+                    `Company: ${data.company || 'N/A'}\n\n` +
+                    `Message:\n${data.message}`
+                );
+                
+                // Open mailto link
+                window.location.href = `mailto:contact@deployhelp.com?subject=${subject}&body=${body}`;
+                
+                // Show success message
+                alert('Thank you for your message! Your default email client should open. If not, please email us directly at contact@deployhelp.com');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
 
         // Update copyright year
         const yearSpan = document.getElementById('currentYear');
