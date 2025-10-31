@@ -5,27 +5,27 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){dataLayer.push(arguments);} 
       gtag('js', new Date());
       gtag('config', 'G-ZNC2C0HYVQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DEPLOYHELP LLC builds neobrutalist, AI-ready customer support systems. Fractional CX leadership, automation sprints, and team enablement for product-led companies ready to scale.">
-    <meta name="keywords" content="customer support consulting, AI customer service, support automation, CX strategy, DEPLOYHELP, fractional CX, customer experience design">
+    <meta name="description" content="DEPLOYHELP LLC helps teams implement Zendesk, chatbots, help centers, and business automation in English and Armenian. Customer support consulting, AI transformation, and operations workflows.">
+    <meta name="keywords" content="Zendesk implementation, customer support consulting, chatbots, help center, business automation, Armenian, English, DEPLOYHELP LLC">
     <meta name="author" content="DEPLOYHELP LLC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://deployhelp.com/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta property="og:title" content="DEPLOYHELP LLC | Neobrutalist Customer Support Consulting">
-    <meta property="og:description" content="Partner with DEPLOYHELP to architect bold, AI-powered support operations, activate teams, and keep customer outcomes at the center.">
+    <meta property="og:title" content="DEPLOYHELP LLC | Customer Support &amp; Automation Consulting">
+    <meta property="og:description" content="Bilingual customer support, Zendesk rollouts, chatbots, and business automation services from DEPLOYHELP LLC.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deployhelp.com">
     <meta property="og:image" content="https://deployhelp.com/og-image.jpg">
     <meta property="og:site_name" content="DEPLOYHELP LLC">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DEPLOYHELP LLC | Neobrutalist CX Consulting">
-    <meta name="twitter:description" content="Neobrutalist support systems, AI adoption sprints, and fractional CX leadership for fast-moving product teams.">
+    <meta name="twitter:title" content="DEPLOYHELP LLC | Customer Support &amp; Automation Consulting">
+    <meta name="twitter:description" content="Zendesk and chatbot implementation, help center builds, agent training, and business automation in English and Armenian.">
     <meta name="twitter:image" content="https://deployhelp.com/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <title>DEPLOYHELP LLC | Neobrutalist Customer Support Consulting</title>
+    <title>DEPLOYHELP LLC | Customer Support &amp; Automation Consulting</title>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -150,6 +150,40 @@
             letter-spacing: 0.2em;
         }
 
+        .language-switch {
+            display: inline-flex;
+            border: 2px solid var(--border);
+            box-shadow: var(--shadow);
+            background: var(--surface);
+        }
+
+        .language-button {
+            appearance: none;
+            border: none;
+            background: transparent;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            padding: 0.55rem 0.9rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .language-button + .language-button {
+            border-left: 2px solid var(--border);
+        }
+
+        .language-button.is-active {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .language-button:focus-visible {
+            outline: 2px solid var(--accent-strong);
+            outline-offset: 2px;
+        }
+
         .nav-toggle {
             display: none;
             background: var(--surface);
@@ -222,6 +256,14 @@
             scroll-margin-top: calc(var(--header-height) + 2rem);
         }
 
+        .language-panel[hidden] {
+            display: none;
+        }
+
+        .language-panel.is-active {
+            display: block;
+        }
+
         .eyebrow {
             font-family: 'IBM Plex Mono', monospace;
             text-transform: uppercase;
@@ -237,13 +279,13 @@
         }
 
         .section-header h2 {
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
             line-height: 1.1;
             margin: 0 0 1rem;
         }
 
         .section-header p {
-            font-size: clamp(1rem, 2.8vw, 1.25rem);
+            font-size: clamp(1rem, 2.6vw, 1.2rem);
             color: var(--muted);
             margin: 0;
         }
@@ -262,22 +304,22 @@
         }
 
         .hero-copy h1 {
-            font-size: clamp(2.6rem, 6vw, 4rem);
-            line-height: 1.05;
-            margin: 0 0 1.25rem;
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            line-height: 1.1;
+            margin: 0 0 1.2rem;
         }
 
         .hero-lede {
-            font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+            font-size: clamp(1.05rem, 2.5vw, 1.25rem);
             color: var(--muted);
-            margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
         }
 
         .hero-cta {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-bottom: clamp(2rem, 5vw, 3rem);
+            margin-bottom: clamp(1.8rem, 4vw, 2.6rem);
         }
 
         .button {
@@ -310,33 +352,6 @@
             box-shadow: var(--shadow-hover);
         }
 
-        .hero-proof {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-
-        .proof-item {
-            border: 2px solid var(--border);
-            padding: 1rem;
-            background: var(--surface-accent);
-            box-shadow: var(--shadow);
-            display: grid;
-            gap: 0.35rem;
-        }
-
-        .proof-number {
-            font-size: 1.9rem;
-            font-weight: 700;
-        }
-
-        .proof-label {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
         .hero-note {
             border: 2px solid var(--border);
             background: var(--surface-strong);
@@ -358,41 +373,20 @@
             margin: 0;
             display: grid;
             gap: 0.6rem;
-        }
-
-        .hero-note li {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 0.95rem;
+        }
+
+        .hero-note li::before {
+            content: '▢';
+            margin-right: 0.6rem;
+            color: var(--accent);
         }
 
         .hero-note-footnote {
             font-size: 0.9rem;
             color: var(--muted);
             margin-top: auto;
-        }
-
-        .credibility {
-            background: var(--surface-accent);
-            border-bottom: 2px solid var(--border);
-        }
-
-        .credibility-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            font-family: 'IBM Plex Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .credibility-list li {
-            border: 2px solid var(--border);
-            padding: 0.75rem 1rem;
-            background: var(--surface);
-            box-shadow: var(--shadow);
         }
 
         .card-grid {
@@ -408,7 +402,7 @@
             box-shadow: var(--shadow);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.9rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -419,7 +413,7 @@
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             margin: 0;
         }
 
@@ -442,164 +436,6 @@
             content: '+';
             margin-right: 0.75rem;
             color: var(--accent);
-        }
-
-        .approach {
-            background: var(--surface);
-            border-top: 2px solid var(--border);
-            border-bottom: 2px solid var(--border);
-        }
-
-        .approach-steps {
-            counter-reset: step;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            gap: 1.75rem;
-        }
-
-        .approach-steps li {
-            counter-increment: step;
-            border: 2px solid var(--border);
-            padding: clamp(1.5rem, 3vw, 2rem);
-            background: var(--surface-accent);
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .approach-steps li::before {
-            content: counter(step);
-            position: absolute;
-            top: -18px;
-            left: -18px;
-            width: 48px;
-            height: 48px;
-            display: grid;
-            place-items: center;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 1.2rem;
-            background: var(--accent-soft);
-            border: 2px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .approach-steps h3 {
-            margin: 0 0 0.75rem;
-            font-size: 1.4rem;
-        }
-
-        .approach-detail {
-            display: inline-block;
-            margin-top: 0.75rem;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
-
-        .case-grid {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .case-card {
-            border: 2px solid var(--border);
-            background: var(--surface);
-            padding: clamp(1.5rem, 3vw, 2rem);
-            box-shadow: var(--shadow);
-            display: grid;
-            gap: 1rem;
-        }
-
-        .case-metric {
-            font-family: 'IBM Plex Mono', monospace;
-            text-transform: uppercase;
-            color: var(--accent-strong);
-            letter-spacing: 0.1em;
-            margin: 0;
-        }
-
-        .case-card h3 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        .case-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 0.5rem;
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
-        .case-card ul li::before {
-            content: '>';
-            margin-right: 0.75rem;
-            color: var(--accent);
-        }
-
-        .insights-grid {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .insight-card {
-            border: 2px solid var(--border);
-            background: var(--surface-accent);
-            padding: clamp(1.5rem, 3vw, 2rem);
-            box-shadow: var(--shadow);
-            display: grid;
-            gap: 1rem;
-        }
-
-        .insight-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 0.6rem;
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
-        .insight-card ul li::before {
-            content: '#';
-            margin-right: 0.75rem;
-            color: var(--border);
-        }
-
-        .collab {
-            background: var(--surface-strong);
-            border-top: 2px solid var(--border);
-            border-bottom: 2px solid var(--border);
-        }
-
-        .collab-card {
-            border: 2px solid var(--border);
-            box-shadow: var(--shadow);
-            background: var(--surface);
-            padding: clamp(2rem, 4vw, 3rem);
-            display: grid;
-            gap: 1rem;
-        }
-
-        .collab-card h2 {
-            margin: 0;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-        }
-
-        .collab-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .contact {
-            background: var(--surface);
         }
 
         .contact-grid {
@@ -638,47 +474,14 @@
             color: var(--accent);
         }
 
-        .faq {
-            background: var(--surface-accent);
-            border-top: 2px solid var(--border);
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        details {
-            border: 2px solid var(--border);
-            background: var(--surface);
-            padding: 1rem 1.5rem;
-            box-shadow: var(--shadow);
-        }
-
-        summary {
-            font-weight: 600;
-            font-size: 1.05rem;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        details[open] summary {
-            color: var(--accent);
-        }
-
-        details p {
-            margin-top: 0.8rem;
-            color: var(--muted);
-        }
-
         footer {
             border-top: 2px solid var(--border);
             background: var(--surface);
             padding: clamp(2rem, 4vw, 3rem) 0;
+        }
+
+        footer [hidden] {
+            display: none;
         }
 
         .footer-top {
@@ -727,7 +530,7 @@
             }
         }
 
-        @media (max-width: 820px) {
+        @media (max-width: 840px) {
             .nav-toggle {
                 display: inline-flex;
             }
@@ -759,14 +562,6 @@
         }
 
         @media (max-width: 620px) {
-            .proof-item {
-                text-align: center;
-            }
-
-            .credibility-list {
-                flex-direction: column;
-            }
-
             .footer-top {
                 flex-direction: column;
             }
@@ -787,53 +582,86 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "DEPLOYHELP LLC",
-      "url": "https://deployhelp.com",
-      "logo": "https://deployhelp.com/favicon.svg",
-      "description": "Neobrutalist customer support consulting helping product-led companies modernize CX, adopt AI, and operationalize frontline teams.",
-      "email": "contact@deployhelp.com",
-      "sameAs": [
-        "https://www.linkedin.com/company/deployhelp"
-      ],
-      "areaServed": "Global",
-      "serviceType": [
-        "Support systems architecture",
-        "AI adoption sprints",
-        "Support automation",
-        "Team enablement",
-        "Support analytics"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "What types of teams does DEPLOYHELP partner with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We work with venture-backed and private equity-backed product organizations that are scaling support across SaaS, fintech, marketplace, and future-of-work categories."
-          }
+          "@type": "ProfessionalService",
+          "name": "DEPLOYHELP LLC",
+          "url": "https://deployhelp.com",
+          "logo": "https://deployhelp.com/favicon.svg",
+          "description": "DEPLOYHELP LLC delivers customer support consulting, Zendesk rollouts, chatbots, and business automation in English and Armenian.",
+          "email": "contact@deployhelp.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/deployhelp"
+          ],
+          "areaServed": "Global",
+          "availableLanguage": [
+            { "@type": "Language", "name": "English", "alternateName": "en" },
+            { "@type": "Language", "name": "Armenian", "alternateName": "hy" }
+          ],
+          "serviceType": [
+            "Zendesk implementation",
+            "Chatbot deployment",
+            "Help center design",
+            "Customer support training",
+            "AI assistants for support",
+            "Business process automation"
+          ]
         },
         {
-          "@type": "Question",
-          "name": "How quickly can an AI-enabled support channel go live?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most engagements move from diagnostic to live AI-enabled workflows in four to six weeks, including experimentation, knowledge orchestration, and frontline training."
-          }
+          "@type": "FAQPage",
+          "@id": "https://deployhelp.com/#faq-en",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which support platforms do you implement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We configure Zendesk, Intercom, and related chat widgets, connect them to your CRM or billing tools, and document the setup so your team can manage it." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you build help centers and chatbots?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We structure the knowledge base, write articles, launch web and in-app widgets, and ship escalation flows so customers get the right answer fast." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you automate non-support workflows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We automate back-office tasks such as refund approvals, sales handoffs, finance checks, and Slack alerts using low-code tools and AI assistants." }
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Do you offer fractional leadership support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DEPLOYHELP provides fractional CX leadership to embed with your team, set operating rhythms, develop managers, and keep strategy aligned with customer outcomes."
-          }
+          "@type": "FAQPage",
+          "@id": "https://deployhelp.com/#faq-hy",
+          "inLanguage": "hy",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ո՞ր հարթակներն եք ներդնում աջակցման համար։",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ներդնում և կարգավորում ենք Zendesk, Intercom և հարակից չաթ-վիջեթներ, կապում ենք CRM-ի կամ հաշվարկային համակարգերի հետ և թողնում ենք հստակ փաստաթղթավորում։" }
+            },
+            {
+              "@type": "Question",
+              "name": "Կատարո՞ւմ եք օգնության կենտրոնի և չաթբոթերի կառուցում։",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Այո. Կազմում ենք գիտելիքների բազայի կառուցվածքը, գրում ենք հոդվածներ, գործարկում ենք վեբ ու հավելվածի վիջեթներ և ապահովում ենք ճիշտ էսկալացիաներ հաճախորդների համար։" }
+            },
+            {
+              "@type": "Question",
+              "name": "Կարո՞ղ եք ավտոմատացնել ոչ միայն աջակցման գործընթացները։",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ավտոմատացնում ենք բիզնես գործընթացներ՝ վերադարձների հաստատում, վաճառքի փոխանցումներ, ֆինանսական ստուգումներ և Slack ահազանգեր՝ օգտագործելով low-code գործիքներ և ԱԲ օգնականներ։" }
+            }
+          ]
         }
       ]
     }
@@ -847,323 +675,321 @@
                 <span>DEPLOYHELP</span>
                 <span>LLC</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false">
+            <div class="language-switch" role="group" aria-label="Language selector">
+                <button type="button" class="language-button is-active" data-lang-toggle="en" aria-pressed="true">EN</button>
+                <button type="button" class="language-button" data-lang-toggle="am" aria-pressed="false">AM</button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNavEn" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <nav class="nav-links" id="primaryNav" aria-label="Primary navigation">
-                <a href="#services">Services</a>
-                <a href="#approach">Approach</a>
-                <a href="#work">Work</a>
-                <a href="#insights">Insights</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact" class="cta-link">Start a project</a>
+            <nav class="nav-links" id="primaryNavEn" data-nav-lang="en" aria-label="Primary navigation">
+                <a href="#en-cs">Customer Support</a>
+                <a href="#en-automation">Automation &amp; AI</a>
+                <a href="#en-contact" class="cta-link">Contact</a>
+            </nav>
+            <nav class="nav-links" id="primaryNavAm" data-nav-lang="am" aria-label="Primary navigation Armenian" hidden>
+                <a href="#am-cs">Հաճախորդների աջակցություն</a>
+                <a href="#am-automation">ԱԲ և ավտոմատացում</a>
+                <a href="#am-contact" class="cta-link">Կապ</a>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" id="hero" aria-labelledby="hero-title">
-            <div class="container hero-container">
-                <div class="hero-copy">
-                    <p class="eyebrow">Customer support and automation consulting</p>
-                    <h1 id="hero-title">DEPLOYHELP builds bold, AI-ready support operations customers remember for the right reasons.</h1>
-                    <p class="hero-lede">We pair deep CX operations expertise with modern automation to help product-led teams launch new channels, integrate AI copilots, and coach frontline leaders without sacrificing the human touch.</p>
-                    <div class="hero-cta" role="group" aria-label="Primary calls to action">
-                        <a class="button primary" href="mailto:contact@deployhelp.com?subject=Project%20Inquiry%20-%20DEPLOYHELP">Book a discovery call</a>
-                        <a class="button ghost" href="#services">See capabilities</a>
-                    </div>
-                    <div class="hero-proof" role="list">
-                        <div class="proof-item" role="listitem">
-                            <span class="proof-number">4-6</span>
-                            <span class="proof-label">weeks to stand up a new channel</span>
+        <div class="language-panel is-active" data-language="en">
+            <section class="hero" id="en-hero" aria-labelledby="en-hero-title">
+                <div class="container hero-container">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Customer support &amp; automation consulting</p>
+                        <h1 id="en-hero-title">DeployHelp builds customer support that scales and automates the work around it.</h1>
+                        <p class="hero-lede">We help SaaS, fintech, and marketplace teams roll out Zendesk and Intercom, design help centers and chatbots, train agents, and streamline the back-office tasks that keep customers happy.</p>
+                        <div class="hero-cta" role="group" aria-label="Primary calls to action">
+                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Talk%20to%20DEPLOYHELP">Talk to us</a>
+                            <a class="button ghost" href="#en-cs">View services</a>
                         </div>
-                        <div class="proof-item" role="listitem">
-                            <span class="proof-number">30%</span>
-                            <span class="proof-label">average cost saved via automation</span>
+                        <aside class="hero-note" aria-label="Focus areas">
+                            <h2>Where we plug in</h2>
+                            <ul>
+                                <li>Zendesk and Intercom implementation</li>
+                                <li>Help center &amp; chatbot build-outs</li>
+                                <li>Agent training and quality programs</li>
+                                <li>Workflow and data automation</li>
+                            </ul>
+                            <p class="hero-note-footnote">Bilingual delivery: English &amp; Armenian.</p>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="en-cs" aria-labelledby="en-cs-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">Customer support</p>
+                        <h2 id="en-cs-title">Customer support that is clear to run and easy to measure.</h2>
+                        <p>We design every element of your support operation—platforms, people, playbooks, and reporting—so teams know what to do and leaders see results.</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Platform rollout</h3>
+                            <p>Fit the tooling to your workflows and data from day one.</p>
+                            <ul>
+                                <li>Zendesk, Intercom, Freshdesk configuration</li>
+                                <li>Widget and channel routing without guesswork</li>
+                                <li>CRM, billing, and data warehouse integrations</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Help center &amp; chatbots</h3>
+                            <p>Help customers self-serve while keeping hand-offs smooth for agents.</p>
+                            <ul>
+                                <li>Knowledge base architecture and article writing</li>
+                                <li>Chatbot conversation design with escalation paths</li>
+                                <li>In-product widgets for web, mobile, and SDK</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Team enablement</h3>
+                            <p>Keep agents, leads, and vendors aligned on quality and speed.</p>
+                            <ul>
+                                <li>Onboarding playbooks and scenario-based training</li>
+                                <li>QA scorecards, calibration, and coaching plans</li>
+                                <li>BPO governance and performance reviews</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="en-automation" aria-labelledby="en-automation-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">Automation &amp; AI</p>
+                        <h2 id="en-automation-title">Automation and AI that reduce repetitive work in support and beyond.</h2>
+                        <p>We combine AI assistants with low-code automation so ticket routing, approvals, and hand-offs move without manual chasing.</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>AI helpers</h3>
+                            <p>Give agents and customers faster answers with confidence.</p>
+                            <ul>
+                                <li>Answer bots powered by curated knowledge</li>
+                                <li>Agent copilots with prompt libraries and guardrails</li>
+                                <li>Red-team testing and tuning cadence</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Process automation</h3>
+                            <p>Automate approvals, escalations, and notifications across teams.</p>
+                            <ul>
+                                <li>Ticket tagging, prioritization, and SLA alerts</li>
+                                <li>Refund, credit, and compliance workflows</li>
+                                <li>Slack, Notion, and spreadsheet automations</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Business operations</h3>
+                            <p>Link support data to finance, RevOps, and product priorities.</p>
+                            <ul>
+                                <li>Shared dashboards and KPI reviews</li>
+                                <li>Data sync between support stack and CRM</li>
+                                <li>Incident retros and continuous improvement backlog</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contact" id="en-contact" aria-labelledby="en-contact-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">Contact</p>
+                        <h2 id="en-contact-title">Tell us where support or automation is stuck.</h2>
+                        <p>Share a quick note and we will respond within one business day.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h3>Email</h3>
+                            <p>Outline your stack, team size, and goals.</p>
+                            <a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a>
                         </div>
-                        <div class="proof-item" role="listitem">
-                            <span class="proof-number">95%</span>
-                            <span class="proof-label">CSAT maintained through transformation</span>
+                        <div class="contact-card">
+                            <h3>Zendesk &amp; chatbot workshop</h3>
+                            <p>60-minute working session to map the rollout or upgrade.</p>
+                            <a href="mailto:contact@deployhelp.com?subject=Zendesk%20Workshop%20Request">Book a workshop</a>
+                        </div>
+                        <div class="contact-card">
+                            <h3>Automation clinic</h3>
+                            <p>Review a process you want to automate outside support.</p>
+                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Clinic%20Request">Request a consult</a>
                         </div>
                     </div>
                 </div>
-                <aside class="hero-note" aria-label="DEPLOYHELP focus areas">
-                    <h2>Where we plug in</h2>
-                    <ul>
-                        <li>AI copilots and knowledge orchestration</li>
-                        <li>Omnichannel tooling selection and roll-out</li>
-                        <li>Team rituals, QA, and enablement design</li>
-                        <li>Executive-ready support analytics</li>
-                    </ul>
-                    <p class="hero-note-footnote">Fractional leadership for high-growth SaaS, fintech, developer tools, and marketplace teams.</p>
-                </aside>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section class="section credibility" id="credibility">
-            <div class="container">
-                <p class="eyebrow">Operating partners</p>
-                <ul class="credibility-list">
-                    <li>Seed to Series D SaaS scale-ups</li>
-                    <li>Automation-forward support leaders</li>
-                    <li>Global support hubs and BPO partners</li>
-                    <li>AI tooling and CX platform teams</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section services" id="services" aria-labelledby="services-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Capabilities</p>
-                    <h2 id="services-title">Go-to-market support architecture delivered in weeks, not quarters.</h2>
-                    <p>Every engagement blends strategy, build, and enablement so your team owns the outcomes long after launch.</p>
-                </div>
-                <div class="card-grid">
-                    <article class="card">
-                        <h3>Support systems architecture</h3>
-                        <p>Design the backbone of your support org &mdash; channels, routing, SLAs, knowledge, and escalation logic &mdash; built for clarity and scale.</p>
-                        <ul>
-                            <li>Stack evaluation and implementation sequencing</li>
-                            <li>Playbooks and governance templates</li>
-                            <li>Change management and rollout planning</li>
-                        </ul>
-                    </article>
-                    <article class="card">
-                        <h3>AI adoption sprints</h3>
-                        <p>Move from experimentation to measurable impact with copilots, generative answers, and assisted workflows your agents trust.</p>
-                        <ul>
-                            <li>Knowledge orchestration and prompt design</li>
-                            <li>Guardrails, QA, and compliance checkpoints</li>
-                            <li>Runbooks for continuous tuning</li>
-                        </ul>
-                    </article>
-                    <article class="card">
-                        <h3>Global team activation</h3>
-                        <p>Upskill managers, specialists, and vendors through rituals that align quality, efficiency, and customer sentiment.</p>
-                        <ul>
-                            <li>Team competency frameworks and scorecards</li>
-                            <li>QA, coaching, and stand-up cadences</li>
-                            <li>Onboarding accelerators for new hires</li>
-                        </ul>
-                    </article>
-                    <article class="card">
-                        <h3>Automation and workflow engineering</h3>
-                        <p>Build automations that actually resolve work: triage, tagging, nudges, and internal tools that keep humans on high-value conversations.</p>
-                        <ul>
-                            <li>Process mapping and systems instrumentation</li>
-                            <li>No-code and low-code workflow builds</li>
-                            <li>Measurement dashboards and alerts</li>
-                        </ul>
-                    </article>
-                    <article class="card">
-                        <h3>Fractional CX leadership</h3>
-                        <p>Embed experienced leadership to steer your CX roadmap, align executive stakeholders, and guide hiring until you are ready to in-house.</p>
-                        <ul>
-                            <li>OKR design and operating rhythm setup</li>
-                            <li>Executive-ready reporting and board packs</li>
-                            <li>Hiring plans, interviews, and onboarding</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section approach" id="approach" aria-labelledby="approach-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">How we work</p>
-                    <h2 id="approach-title">A zero-fluff four phase model that respects your velocity.</h2>
-                    <p>We plug into your stand-ups, ops reviews, and customer feedback loops so we ship with your team, not at them.</p>
-                </div>
-                <ol class="approach-steps">
-                    <li>
-                        <h3>Pattern match and diagnose</h3>
-                        <p>Rapid discovery across customers, data, and workflows to identify the moments that matter most and the friction that slows teams down.</p>
-                        <span class="approach-detail">Artifacts: CX baseline report, automation backlog, stakeholder map.</span>
-                    </li>
-                    <li>
-                        <h3>Design the operating system</h3>
-                        <p>Translate insights into a neobrutalist support blueprint: service design, playbooks, policies, and tooling decisions that are impossible to misinterpret.</p>
-                        <span class="approach-detail">Artifacts: support blueprint, KPI tree, implementation plan.</span>
-                    </li>
-                    <li>
-                        <h3>Deploy and coach</h3>
-                        <p>Stand up systems, ship automations, and stay in the trenches with your team through enablement sessions, QA reviews, and executive checkpoints.</p>
-                        <span class="approach-detail">Artifacts: go-live checklist, training tracks, executive dashboards.</span>
-                    </li>
-                    <li>
-                        <h3>Measure and iterate</h3>
-                        <p>Instrument performance, capture feedback, and create an improvement backlog that keeps momentum without us in the room.</p>
-                        <span class="approach-detail">Artifacts: analytics pack, experimentation roadmap, playbook updates.</span>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="section work" id="work" aria-labelledby="work-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Selected engagements</p>
-                    <h2 id="work-title">Outcomes we thrive on.</h2>
-                    <p>Every project pairs measurable impact with a confident team ready to scale the results.</p>
-                </div>
-                <div class="case-grid">
-                    <article class="case-card">
-                        <p class="case-metric">+112% self-serve resolution</p>
-                        <h3>AI knowledge layer for B2B SaaS</h3>
-                        <p>Architected a retrieval-augmented knowledge base and guided agents through prompt engineering, cutting escalations in half within two cycles.</p>
-                        <ul>
-                            <li>Retained tone and compliance guardrails</li>
-                            <li>Built red-team and regression protocols</li>
-                            <li>Shipped live tuning workshops</li>
-                        </ul>
-                    </article>
-                    <article class="case-card">
-                        <p class="case-metric">-35% handle time</p>
-                        <h3>Omnichannel launch for fintech ops</h3>
-                        <p>Centralized email, chat, and voice in six weeks, introduced automation for underwriting triage, and built scorecards for distributed vendor teams.</p>
-                        <ul>
-                            <li>24/7 routing and service tiering</li>
-                            <li>Unified analytics with executive dashboards</li>
-                            <li>Compliance audit and documentation pack</li>
-                        </ul>
-                    </article>
-                    <article class="case-card">
-                        <p class="case-metric">NPS +22 within quarter</p>
-                        <h3>Fractional CX leadership for climate tech</h3>
-                        <p>Stabilized post-series B support during hyper-growth, introduced rituals, hired managers, and set up continuous insight loops for product.</p>
-                        <ul>
-                            <li>Leadership enablement and hiring playbook</li>
-                            <li>Voice-of-customer insights fuel product roadmap</li>
-                            <li>Experimentation backlog tied to company OKRs</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section insights" id="insights" aria-labelledby="insights-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Operating principles</p>
-                    <h2 id="insights-title">What makes DEPLOYHELP different.</h2>
-                </div>
-                <div class="insights-grid">
-                    <article class="insight-card">
-                        <h3>Design for clarity</h3>
-                        <ul>
-                            <li>Neobrutalist systems make responsibilities obvious.</li>
-                            <li>Every artifact earns its space by solving a specific friction.</li>
-                            <li>We document in plain language your team can ship with.</li>
-                        </ul>
-                    </article>
-                    <article class="insight-card">
-                        <h3>Bias to action</h3>
-                        <ul>
-                            <li>Weekly demos tie strategy to working prototypes.</li>
-                            <li>Automation is measured against customer outcomes, not novelty.</li>
-                            <li>Leaders leave with a playbook and a plan for the next 90 days.</li>
-                        </ul>
-                    </article>
-                    <article class="insight-card">
-                        <h3>Humans at the center</h3>
-                        <ul>
-                            <li>AI augments the team; it never hides accountability.</li>
-                            <li>Enablement is built with the people doing the work.</li>
-                            <li>We build feedback loops that customers can feel.</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section collab" aria-labelledby="collab-title">
-            <div class="container">
-                <div class="collab-card">
-                    <p class="eyebrow">Let us build together</p>
-                    <h2 id="collab-title">Ready for a support organization that scales with product ambition?</h2>
-                    <p>We bring the frameworks, workshops, and leadership muscle. You bring the vision and your sharpest operators. Together we ship customer experiences people rave about.</p>
-                    <div class="collab-actions">
-                        <a class="button primary" href="mailto:contact@deployhelp.com?subject=Discovery%20Call%20Request%20-%20DEPLOYHELP">Start a project</a>
-                        <a class="button ghost" href="#faq">Read the FAQ</a>
+        <div class="language-panel" data-language="am" hidden>
+            <section class="hero" id="am-hero" aria-labelledby="am-hero-title">
+                <div class="container hero-container">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Հաճախորդների աջակցություն և ավտոմատացում</p>
+                        <h1 id="am-hero-title">DeployHelp-ը ստեղծում է մասշտաբվող աջակցություն և ավտոմատացնում է հարակից գործընթացները։</h1>
+                        <p class="hero-lede">Ստեղծում ենք Zendesk և Intercom լուծումներ, կառուցում ենք օգնության կենտրոններ ու չաթբոթեր, վերապատրաստում ենք թիմերին և կարգավորում ենք բիզնես գործընթացները՝ հաճախորդի փորձը բարձրացնելու համար։</p>
+                        <div class="hero-cta" role="group" aria-label="Գլխավոր գործողություններ">
+                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Կապ%20DEPLOYHELP">Գրեք մեզ</a>
+                            <a class="button ghost" href="#am-cs">Ծանոթացեք ծառայություններին</a>
+                        </div>
+                        <aside class="hero-note" aria-label="Հիմնական ուղղություններ">
+                            <h2>Ինչով ենք զբաղվում</h2>
+                            <ul>
+                                <li>Zendesk և Intercom-ի ներդրում</li>
+                                <li>Օգնության կենտրոնի և չաթբոթերի զարգացում</li>
+                                <li>Գործընկերների և օպերատորների վերապատրաստում</li>
+                                <li>Ավտոմատացված աշխատանքային հոսքեր</li>
+                            </ul>
+                            <p class="hero-note-footnote">Աշխատում ենք հայերեն և անգլերեն թիմերի հետ։</p>
+                        </aside>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section contact" id="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Contact</p>
-                    <h2 id="contact-title">Two ways to get moving right now.</h2>
-                    <p>Pick whichever path gets you to value fastest. We reply within one business day.</p>
+            <section class="section" id="am-cs" aria-labelledby="am-cs-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">Հաճախորդների աջակցություն</p>
+                        <h2 id="am-cs-title">Աջակցություն, որը կառավարելի է և հասկանալի թիմի համար։</h2>
+                        <p>Կազմում ենք պարզ գործընթացներ, գործիքներ և հաշվետվություններ, որպեսզի օպերատորները արագ աշխատեն, իսկ ղեկավարները տեսնեն արդյունքը։</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Պլատֆորմի ներդրում</h3>
+                            <p>Համապատասխանեցնում ենք գործիքները ձեր տվյալների հոսքերին։</p>
+                            <ul>
+                                <li>Zendesk, Intercom, Freshdesk կարգավորում</li>
+                                <li>Չաթ-վիջեթների երթուղավորում և SLA-ների կարգավորում</li>
+                                <li>CRM-ի ու հաշվարկային համակարգերի ինտեգրում</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Օգնության կենտրոն և չաթբոթեր</h3>
+                            <p>Հաճախորդները ստանում են պատասխան, թիմը՝ հստակ էսկալացիա։</p>
+                            <ul>
+                                <li>Գիտելիքների բազայի կառուցվածք և հոդվածների ստեղծում</li>
+                                <li>Չաթբոթերի սցենարներ և ուղղորդման կանոններ</li>
+                                <li>Վեբ ճակատային և in-app վիջեթների գործարկում</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Թիմի կառավարում</h3>
+                            <p>Ստեղծում ենք որակի վերահսկման և ուսուցման հստակ մեխանիզմ։</p>
+                            <ul>
+                                <li>Սկզբնական և շարունակական վերապատրաստման ծրագրեր</li>
+                                <li>QA սքորքարդներ, կալիբրացիա և մեթոդական հետադարձ կապ</li>
+                                <li>Արտաքին ծառայության կենտրոնների կառավարում</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Email</h3>
-                        <p>Share a few lines about your support goals and current stack.</p>
-                        <a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Workshop request</h3>
-                        <p>Book a 60-minute working session to diagnose your top CX friction point.</p>
-                        <a href="mailto:contact@deployhelp.com?subject=Workshop%20Request%20-%20DEPLOYHELP">Schedule a workshop</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Signal boost</h3>
-                        <p>Follow along as we share playbooks, templates, and what we are shipping next.</p>
-                        <a href="https://www.linkedin.com/company/deployhelp" rel="noopener" target="_blank">LinkedIn updates</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section faq" id="faq" aria-labelledby="faq-title">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">FAQ</p>
-                    <h2 id="faq-title">Answers to the questions teams ask before partnering.</h2>
+            <section class="section" id="am-automation" aria-labelledby="am-automation-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">ԱԲ և ավտոմատացում</p>
+                        <h2 id="am-automation-title">Ավտոմատացնում ենք թե՛ աջակցության, թե՛ բիզնեսի օպերացիաները։</h2>
+                        <p>Կիրառում ենք ԱԲ օգնականներ և low-code գործիքներ, որպեսզի խնայենք թիմի ժամանակը և կանխենք կրկնվող քայլերը։</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>ԱԲ օգնականներ</h3>
+                            <p>Արագ պատասխաններ հաճախորդներին և գործիքներ օպերատորների համար։</p>
+                            <ul>
+                                <li>Գիտելիքի վրա հիմնված պատասխանող բոթեր</li>
+                                <li>Ագենտների համար prompt-երի գրադարան և սահմանապահներ</li>
+                                <li>Թեստավորում և շարունակական կարգավորում</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Գործընթացների ավտոմատացում</h3>
+                            <p>Ցրված աշխատանքը տեղափոխում ենք workflows-ի մեջ։</p>
+                            <ul>
+                                <li>Ticket-ների դասակարգում, priortization և SLA ազդանշաններ</li>
+                                <li>Փոխհատուցումների, վերադարձների և հավանությունների հոսքեր</li>
+                                <li>Slack, Notion և Sheets ավտոմատացում</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Բիզնես օպերացիաներ</h3>
+                            <p>Միացնում ենք աջակցության տվյալները վաճառքի, ֆինանսների և արտադրանքի թիմերին։</p>
+                            <ul>
+                                <li>Միավորված داشբորդներ և KPI մոնիթորինգ</li>
+                                <li>Տվյալների համաժամացում աջակցության և CRM համակարգերի միջև</li>
+                                <li>Ինցիդենտների վերլուծություն և բարելավման backlog</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
-                <div class="faq-list">
-                    <details>
-                        <summary>What industries does DEPLOYHELP focus on?</summary>
-                        <p>We partner primarily with SaaS, fintech, developer tools, and marketplace companies that are ready to instrument their support organization and lean into AI-powered workflows. If your team ships product fast, we are built for you.</p>
-                    </details>
-                    <details>
-                        <summary>Can you integrate with our existing support stack?</summary>
-                        <p>Yes. We regularly work with Zendesk, Intercom, Salesforce, Front, Help Scout, and bespoke internal tools. Our job is to make the tech you already have perform better before you invest in net-new platforms.</p>
-                    </details>
-                    <details>
-                        <summary>What does a typical engagement look like?</summary>
-                        <p>Engagements run 8-10 weeks. We begin with a diagnostic, align on the blueprint, co-deliver releases in two-week sprints, and finish with enablement plus an improvement backlog so your team can keep iterating.</p>
-                    </details>
-                    <details>
-                        <summary>Do you collaborate with internal product or engineering teams?</summary>
-                        <p>Absolutely. Customer support transformation touches product, engineering, and data. We embed into their ceremonies to ensure customer insights influence roadmaps and automation connects to core systems.</p>
-                    </details>
+            </section>
+
+            <section class="section contact" id="am-contact" aria-labelledby="am-contact-title">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="eyebrow">Կապ</p>
+                        <h2 id="am-contact-title">Պատմեք՝ որտեղ է խցանվում աջակցությունը կամ ավտոմատացումը։</h2>
+                        <p>Գրեք կարճ նամակ, և մեկ աշխատանքային օրվա ընթացքում կպատասխանենք։</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h3>Էլ. հասցե</h3>
+                            <p>Նշեք գործիքները, թիմի չափը և առաջնային խնդիրը։</p>
+                            <a href="mailto:contact@deployhelp.com">contact@deployhelp.com</a>
+                        </div>
+                        <div class="contact-card">
+                            <h3>Zendesk / chatbot սեմինար</h3>
+                            <p>60 րոպեանոց սեսիա՝ ընթացիկ կարգավորումները վերանայելու կամ նոր թողարկում պլանավորելու համար։</p>
+                            <a href="mailto:contact@deployhelp.com?subject=Zendesk%20Խորհրդատվություն">Պատվիրել սեմինար</a>
+                        </div>
+                        <div class="contact-card">
+                            <h3>Ավտոմատացման քննարկում</h3>
+                            <p>Բերեք մեկ գործընթաց, որը ցանկանում եք ավտոմատացնել աջակցության ոլորտից դուրս։</p>
+                            <a href="mailto:contact@deployhelp.com?subject=Ավտոմատացման%20Քլինիկա">Պատվիրել քննարկում</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container" data-footer-lang="en">
             <div class="footer-top">
                 <div class="footer-brand">DEPLOYHELP LLC</div>
                 <div class="footer-nav">
-                    <a href="#services">Services</a>
-                    <a href="#approach">Approach</a>
-                    <a href="#work">Work</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#en-cs">Customer Support</a>
+                    <a href="#en-automation">Automation &amp; AI</a>
+                    <a href="#en-contact">Contact</a>
                     <a href="mailto:contact@deployhelp.com">Email us</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; <span id="currentYear"></span> DEPLOYHELP LLC</span>
-                <span>Customer support consulting built on bold design and measurable outcomes.</span>
+                <span>&copy; <span id="currentYearEn"></span> DEPLOYHELP LLC</span>
+                <span>Support and automation consulting — English &amp; Armenian.</span>
+            </div>
+        </div>
+        <div class="container" data-footer-lang="am" hidden>
+            <div class="footer-top">
+                <div class="footer-brand">DEPLOYHELP LLC</div>
+                <div class="footer-nav">
+                    <a href="#am-cs">Հաճախորդների աջակցություն</a>
+                    <a href="#am-automation">ԱԲ և ավտոմատացում</a>
+                    <a href="#am-contact">Կապ</a>
+                    <a href="mailto:contact@deployhelp.com">Գրել մեզ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="currentYearAm"></span> DEPLOYHELP LLC</span>
+                <span>Աջակցություն և ավտոմատացում՝ հայերեն և անգլերեն։</span>
             </div>
         </div>
     </footer>
@@ -1171,30 +997,90 @@
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const navToggle = document.getElementById('navToggle');
-        const primaryNav = document.getElementById('primaryNav');
-        const navLinks = primaryNav ? primaryNav.querySelectorAll('a') : [];
+        const languagePanels = document.querySelectorAll('[data-language]');
+        const languageButtons = document.querySelectorAll('[data-lang-toggle]');
+        const navGroups = document.querySelectorAll('[data-nav-lang]');
+        const footerBlocks = document.querySelectorAll('[data-footer-lang]');
+        let activeLanguage = localStorage.getItem('deployhelp-language') || 'en';
 
-        if (navToggle && primaryNav) {
+        const getNav = (lang = activeLanguage) => document.querySelector(`[data-nav-lang="${lang}"]`);
+
+        function closeNav() {
+            const nav = getNav();
+            if (nav) {
+                nav.classList.remove('is-open');
+            }
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+        }
+
+        function setLanguage(lang) {
+            activeLanguage = lang;
+            document.documentElement.setAttribute('lang', lang === 'am' ? 'hy' : 'en');
+
+            languagePanels.forEach(panel => {
+                const isActive = panel.dataset.language === lang;
+                panel.toggleAttribute('hidden', !isActive);
+                panel.classList.toggle('is-active', isActive);
+            });
+
+            navGroups.forEach(nav => {
+                const isActive = nav.dataset.navLang === lang;
+                nav.toggleAttribute('hidden', !isActive);
+                nav.classList.remove('is-open');
+            });
+
+            footerBlocks.forEach(footer => {
+                footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+            });
+
+            languageButtons.forEach(button => {
+                const isActive = button.dataset.langToggle === lang;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            const activeNav = getNav(lang);
+            if (activeNav) {
+                navToggle.setAttribute('aria-controls', activeNav.id);
+            }
+            closeNav();
+            localStorage.setItem('deployhelp-language', lang);
+        }
+
+        if (navToggle) {
             navToggle.addEventListener('click', () => {
+                const nav = getNav();
+                if (!nav) return;
                 const expanded = navToggle.getAttribute('aria-expanded') === 'true';
                 navToggle.setAttribute('aria-expanded', String(!expanded));
-                primaryNav.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
                 document.body.classList.toggle('nav-open', !expanded);
             });
+        }
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    primaryNav.classList.remove('is-open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    document.body.classList.remove('nav-open');
-                });
+        document.querySelectorAll('[data-nav-lang] a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeNav();
             });
-        }
+        });
 
-        const currentYear = document.getElementById('currentYear');
-        if (currentYear) {
-            currentYear.textContent = new Date().getFullYear();
-        }
+        languageButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const lang = button.dataset.langToggle;
+                if (lang && lang !== activeLanguage) {
+                    setLanguage(lang);
+                }
+            });
+        });
+
+        setLanguage(activeLanguage);
+
+        const year = new Date().getFullYear();
+        const yearEn = document.getElementById('currentYearEn');
+        const yearAm = document.getElementById('currentYearAm');
+        if (yearEn) yearEn.textContent = year;
+        if (yearAm) yearAm.textContent = year;
     });
     </script>
 </body>
