@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPLOYHELP LLC - Agent Collaboration Hub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #ff00ff;
+            --secondary-color: #00ffff;
+            --accent-color: #ffff00;
+            --background: #0a0a0a;
+            --card-background: rgba(20, 20, 20, 0.9);
+            --text-color: #ffffff;
+            --success-color: #39ff14;
+            --error-color: #ff1493;
+            --warning-color: #ffaa00;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: var(--background);
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--primary-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', monospace;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .header .status {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--success-color);
+            box-shadow: 0 0 10px var(--success-color);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            font-family: 'Share Tech Mono', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        button:hover {
+            background: var(--secondary-color);
+            color: var(--background);
+            box-shadow: 0 0 15px var(--secondary-color);
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            border-right: 2px solid var(--secondary-color);
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .agent-list {
+            list-style: none;
+        }
+
+        .agent-item {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: var(--card-background);
+            border: 2px solid transparent;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .agent-item:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .agent-item.active {
+            border-left-color: var(--primary-color);
+            background: rgba(255, 0, 255, 0.1);
+        }
+
+        .agent-item.working {
+            border-left-color: var(--success-color);
+            animation: working 1s infinite;
+        }
+
+        @keyframes working {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .agent-name {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .agent-role {
+            font-size: 0.75rem;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        .agent-status {
+            font-size: 0.7rem;
+            margin-top: 0.25rem;
+            color: var(--success-color);
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #000000 100%);
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--card-background);
+            border-left: 4px solid var(--secondary-color);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .message.task {
+            border-left-color: var(--primary-color);
+            background: rgba(255, 0, 255, 0.1);
+        }
+
+        .message.error {
+            border-left-color: var(--error-color);
+            background: rgba(255, 20, 147, 0.1);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .message-sender {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-shadow: 0 0 5px var(--primary-color);
+        }
+
+        .message-time {
+            font-size: 0.7rem;
+            color: var(--text-color);
+            opacity: 0.6;
+        }
+
+        .message-content {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .input-area {
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid var(--primary-color);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 0.75rem;
+            background: var(--card-background);
+            border: 2px solid var(--secondary-color);
+            color: var(--text-color);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .input-area input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .input-area button {
+            min-width: 100px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-color);
+            opacity: 0.5;
+        }
+
+        .empty-state h2 {
+            font-family: 'Orbitron', monospace;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DEPLOYHELP LLC - Agent Collaboration Hub</h1>
+        <div class="status">
+            <div class="status-indicator"></div>
+            <span id="statusText">System Active</span>
+            <div class="controls">
+                <button onclick="executeTask()">Start Task</button>
+                <button onclick="clearMessages()">Clear</button>
+                <button onclick="refreshStatus()">Refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--secondary-color); margin-bottom: 1rem;">Agents</h3>
+            <ul class="agent-list" id="agentList"></ul>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="empty-state">
+                    <h2>Agent Collaboration Hub</h2>
+                    <p>Waiting for agents to start collaborating...</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">Click "Start Task" to begin development work</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Send a message to agents..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let pollInterval = null;
+
+        function formatTime(date) {
+            return new Date(date).toLocaleTimeString();
+        }
+
+        function renderMessages(messages) {
+            const container = document.getElementById('messages');
+            
+            if (messages.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h2>Agent Collaboration Hub</h2>
+                        <p>Waiting for agents to start collaborating...</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = messages.map(msg => {
+                const typeClass = msg.type === 'task' ? 'task' : msg.type === 'error' ? 'error' : '';
+                return `
+                    <div class="message ${typeClass}">
+                        <div class="message-header">
+                            <span class="message-sender">${msg.sender}</span>
+                            <span class="message-time">${formatTime(msg.timestamp)}</span>
+                        </div>
+                        <div class="message-content">${escapeHtml(msg.message)}</div>
+                    </div>
+                `;
+            }).join('');
+
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function renderAgents(status) {
+            const container = document.getElementById('agentList');
+            container.innerHTML = Object.entries(status).map(([name, agent]) => {
+                const statusClass = agent.status === 'working' ? 'working' : agent.status === 'evaluating' ? 'active' : '';
+                return `
+                    <li class="agent-item ${statusClass}">
+                        <div class="agent-name">${name}</div>
+                        <div class="agent-role">${agent.capabilities.join(', ')}</div>
+                        <div class="agent-status">${agent.status} - ${agent.tasksCompleted} tasks completed</div>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        async function fetchMessages() {
+            try {
+                const response = await fetch('/api/messages');
+                const data = await response.json();
+                renderMessages(data.messages || []);
+            } catch (error) {
+                console.error('Error fetching messages:', error);
+            }
+        }
+
+        async function fetchStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                renderAgents(data.status || {});
+                document.getElementById('statusText').textContent = 
+                    Object.values(data.status || {}).some(s => s.status === 'working') 
+                        ? 'Agents Working...' 
+                        : 'System Active';
+            } catch (error) {
+                console.error('Error fetching status:', error);
+            }
+        }
+
+        async function executeTask() {
+            const task = {
+                type: 'website_development',
+                description: 'Develop and optimize DEPLOYHELP LLC website and online presence',
+                priority: 'high'
+            };
+
+            try {
+                const response = await fetch('/api/task', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(task)
+                });
+                const data = await response.json();
+                if (data.success) {
+                    console.log('Task executed:', data);
+                }
+            } catch (error) {
+                console.error('Error executing task:', error);
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Create a task from the message
+            const task = {
+                type: 'website_development',
+                description: message,
+                priority: 'medium'
+            };
+
+            try {
+                await fetch('/api/task', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(task)
+                });
+                input.value = '';
+            } catch (error) {
+                console.error('Error sending message:', error);
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        async function clearMessages() {
+            try {
+                await fetch('/api/clear', { method: 'POST' });
+                fetchMessages();
+            } catch (error) {
+                console.error('Error clearing messages:', error);
+            }
+        }
+
+        function refreshStatus() {
+            fetchStatus();
+            fetchMessages();
+        }
+
+        // Start polling
+        function startPolling() {
+            fetchMessages();
+            fetchStatus();
+            pollInterval = setInterval(() => {
+                fetchMessages();
+                fetchStatus();
+            }, 2000); // Poll every 2 seconds
+        }
+
+        // Initialize
+        startPolling();
+    </script>
+</body>
+</html>

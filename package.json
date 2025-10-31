@@ -1,0 +1,20 @@
+{
+  "name": "deployhelp-agent-system",
+  "version": "1.0.0",
+  "description": "Multi-agent orchestration system for DEPLOYHELP LLC website development",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "agents",
+    "orchestration",
+    "multi-agent",
+    "deployhelp"
+  ],
+  "author": "DEPLOYHELP LLC",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
