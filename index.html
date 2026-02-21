@@ -5,8 +5,9 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
-          window.dataLayer = window.dataLayer || []            function gt a g() { dataLayer.push(argum et                gtag('js', new D        ;
-        gtag('config', 'G-ZNC2VQ');
+        window.dataLayer = window.dataLayer || []            function gt a g() {
+            dataLayer.push(argum et                gtag('js', new D        ;
+            gtag('config', 'G-ZNC2VQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1675,7 +1676,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; <span id="currentYearEn"></span> DEPLOYHELP LLC</span>
-                <span>Support &amp; automation consulting • EN • AM • RU • UA.</span>
+                <span>Support &amp; automation consulting.</span>
             </div>
         </div>
         <div class="container" data-footer-lang="am" hidden>
@@ -1692,7 +1693,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; <span id="currentYearAm"></span> DEPLOYHELP LLC</span>
-                <span>Աջակցություն և ավտոմատացում • EN • AM • RU • UA.</span>
+                <span>Աջակցություն և ավտոմատացում։</span>
             </div>
         </div>
         <div class="container" data-footer-lang="ru" hidden>
@@ -1709,7 +1710,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; <span id="currentYearRu"></span> DEPLOYHELP LLC</span>
-                <span>Поддержка и автоматизация • EN • AM • RU • UA.</span>
+                <span>Поддержка и автоматизация.</span>
             </div>
         </div>
         <div class="container" data-footer-lang="ua" hidden>
@@ -1726,83 +1727,104 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; <span id="currentYearUa"></span> DEPLOYHELP LLC</span>
-                <span>Підтримка та автоматизація • EN • AM • RU • UA.</span>
+                <span>Підтримка та автоматизація.</span>
             </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.getElementById('navToggle');
-            const languagePanels = document.querySelectorAll('[data-language]');
-            const languageButtons = document.querySelectorAll('[data-lang-toggle]');
-            const navGroups = document.querySelectorAll('[data-nav-lang]');
-            const footerBlocks = document.querySelectorAll('[data-footer-lang]');
-            const LANGS = ['en', 'am', 'ru', 'ua'];
-            const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
-            let activeLanguage = localStorage.getItem('deployhelp-language');
-            if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
+            document.addEventListener('DOMContentLoaded', function () {
+                const navToggle = document.getElementById('navToggle');
+                const navLinksAll = document.querySelectorAll('[data-nav-lang]'); // Changed to select all nav groups
+                const languagePanels = document.querySelectorAll('[data-language]');
+                const languageButtons = document.querySelectorAll('[data-lang-toggle]');
+                const footerBlocks = document.querySelectorAll('[data-footer-lang]');
+                const LANGS = ['en', 'am', 'ru', 'ua'];
+                const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
+                let activeLanguage = localStorage.getItem('deployhelp-language');
+                if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
 
-            const getNav = (lang = activeLanguage) => document.querySelector(`[data-nav-lang="${lang}"]`);
-
-            function closeNav() {
-                const nav = getNav();
-                if (nav) nav.classList.remove('is-open');
-                navToggle.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('nav-open');
-            }
-
-            function setLanguage(lang) {
-                activeLanguage = lang;
-                document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
-
-                languagePanels.forEach(panel => {
-                    const isActive = panel.dataset.language === lang;
-                    panel.toggleAttribute('hidden', !isActive);
-                    panel.classList.toggle('is-active', isActive);
+                // Set dynamic years
+                const yearStr = new Date().getFullYear().toString();
+                ['En', 'Am', 'Ru', 'Ua'].forEach(id => {
+                    const el = document.getElementById('currentYear' + id);
+                    if (el) el.textContent = yearStr;
                 });
 
-                navGroups.forEach(nav => {
-                    const isActive = nav.dataset.navLang === lang;
-                    nav.toggleAttribute('hidden', !isActive);
-                    nav.classList.remove('is-open');
+                // Mobile nav toggle
+                if (navToggle) {
+                    navToggle.addEventListener('click', () => {
+                        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                        navToggle.setAttribute('aria-expanded', String(!isExpanded));
+                        document.body.classList.toggle('nav-open', !isExpanded); // Toggle body class for overlay/scroll lock
+                        navLinksAll.forEach(nav => {
+                            if (!nav.hidden) { // Only affect the currently visible nav
+                                nav.classList.toggle('is-open', !isExpanded);
+                            }
+                        });
+                    });
+                }
+
+                // Close mobile nav on link click
+                document.querySelectorAll('[data-nav-lang] a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        document.body.classList.remove('nav-open');
+                        navLinksAll.forEach(nav => nav.classList.remove('is-open'));
+                    });
                 });
 
-                footerBlocks.forEach(footer => {
-                    footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+                function setLanguage(lang) {
+                    activeLanguage = lang;
+                    document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
+
+                    languagePanels.forEach(panel => {
+                        const isActive = panel.dataset.language === lang;
+                        panel.toggleAttribute('hidden', !isActive);
+                        panel.classList.toggle('is-active', isActive);
+                    });
+
+                    navGroups.forEach(nav => {
+                        const isActive = nav.dataset.navLang === lang;
+                        nav.toggleAttribute('hidden', !isActive);
+                        nav.classList.remove('is-open');
+                    });
+
+                    footerBlocks.forEach(footer => {
+                        footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+                    });
+
+                    languageButtons.forEach(button => {
+                        const isActive = button.dataset.langToggle === lang;
+                        button.classList.toggle('is-active', isActive);
+                        button.setAttribute('aria-pressed', String(isActive));
+                    });
+
+                    const activeNav = getNav(lang);
+                    if (activeNav) navToggle.setAttribute('aria-controls', activeNav.id);
+                    closeNav();
+                    localStorage.setItem('deployhelp-language', lang);
+                }
+
+                if (navToggle) {
+                    navToggle.addEventListener('click', () => {
+                        const nav = getNav();
+                        if (!nav) return;
+                        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                        navToggle.setAttribute('aria-expanded', String(!expanded));
+                        nav.classList.toggle('is-open');
+                        document.body.classList.toggle('nav-open', !expanded);
+                    });
+                }
+
+                document.querySelectorAll('[data-nav-lang] a').forEach(link => {
+                    link.addEventListener('click', () => { closeNav(); });
                 });
-
-                languageButtons.forEach(button => {
-                    const isActive = button.dataset.langToggle === lang;
-                    button.classList.toggle('is-active', isActive);
-                    button.setAttribute('aria-pressed', String(isActive));
-                });
-
-                const activeNav = getNav(lang);
-                if (activeNav) navToggle.setAttribute('aria-controls', activeNav.id);
-                closeNav();
-                localStorage.setItem('deployhelp-language', lang);
-            }
-
-            if (navToggle) {
-                navToggle.addEventListener('click', () => {
-                    const nav = getNav();
-                    if (!nav) return;
-                    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                    navToggle.setAttribute('aria-expanded', String(!expanded));
-                    nav.classList.toggle('is-open');
-                    document.body.classList.toggle('nav-open', !expanded);
-                });
-            }
-
-            document.querySelectorAll('[data-nav-lang] a').forEach(link => {
-                link.addEventListener('click', () => { closeNav(); });
-            });
 
              lan guage Buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const lang = button.dataset.langToggle;
-                    ifng  !== activeLanguage) setLanguage(lang);
+                    button.addEventListener('click', () => {
+                        const lang = button.dataset.langToggle;
+                        ifng !== activeLanguage) setLanguage(lang);
                 });
             });
 
@@ -1832,52 +1854,52 @@
         </div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const popup = document.getElementById('dh-email-popup');
-        const gmailBtn = document.getElementById('dh-gmail-btn');
-        const outlookBtn = document.getElementById('dh-outlook-btn');
-        const yahooBtn = document.getElementById('dh-yahoo-btn');
-        const copyBtn = document.getElementById('dh-copy-btn');
-        const closeBtn = document.querySelector('.dh-popup-close');
-        const overlay = document.querySelector('.dh-popup-overlay');
-        let currentEmail = '';
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('dh-email-popup');
+            const gmailBtn = document.getElementById('dh-gmail-btn');
+            const outlookBtn = document.getElementById('dh-outlook-btn');
+            const yahooBtn = document.getElementById('dh-yahoo-btn');
+            const copyBtn = document.getElementById('dh-copy-btn');
+            const closeBtn = document.querySelector('.dh-popup-close');
+            const overlay = document.querySelector('.dh-popup-overlay');
+            let currentEmail = '';
 
-        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                let rawEmail = link.getAttribute('href').replace('mailto:', '');
-                let subject = '';
-                if (rawEmail.includes('?')) {
-                   const parts = rawEmail.split('?');
-                   rawEmail = parts[0];
-                   const params = new URLSearchParams(parts[1]);
-                   subject = params.get('subject') || '';
-                }
-                currentEmail = rawEmail;
-                
-                const to = encodeURIComponent(currentEmail);
-                const subjStr = subject ? encodeURIComponent(subject) : '';
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let rawEmail = link.getAttribute('href').replace('mailto:', '');
+                    let subject = '';
+                    if (rawEmail.includes('?')) {
+                        const parts = rawEmail.split('?');
+                        rawEmail = parts[0];
+                        const params = new URLSearchParams(parts[1]);
+                        subject = params.get('subject') || '';
+                    }
+                    currentEmail = rawEmail;
 
-                gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su='+subjStr : ''}`;
-                outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject='+subjStr : ''}`;
-                yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj='+subjStr : ''}`;
+                    const to = encodeURIComponent(currentEmail);
+                    const subjStr = subject ? encodeURIComponent(subject) : '';
 
-                popup.classList.add('is-open');
+                    gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su=' + subjStr : ''}`;
+                    outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject=' + subjStr : ''}`;
+                    yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj=' + subjStr : ''}`;
+
+                    popup.classList.add('is-open');
+                });
+            });
+
+            const closePopup = () => {
+                popup.classList.remove('is-open');
+                copyBtn.textContent = 'Copy Email Address';
+            };
+            closeBtn.addEventListener('click', closePopup);
+            overlay.addEventListener('click', closePopup);
+
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(currentEmail);
+                copyBtn.textContent = 'COPIED!';
             });
         });
-
-        const closePopup = () => { 
-            popup.classList.remove('is-open'); 
-            copyBtn.textContent = 'Copy Email Address'; 
-        };
-        closeBtn.addEventListener('click', closePopup);
-        overlay.addEventListener('click', closePopup);
-        
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(currentEmail);
-            copyBtn.textContent = 'COPIED!';
-        });
-      });
     </script>
 </body>
 
