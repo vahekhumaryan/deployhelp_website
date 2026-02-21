@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
-        window.dataLayer = window.dataLayer || []            function gt a g() {
-            dataLayer.push(argum et                gtag('js', new D        ;
-            gtag('config', 'G-ZNC2VQ');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZNC2C0HYVQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1691,66 +1691,66 @@
     </footer>
 
     <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const navLinksAll = document.querySelectorAll('[data-nav-lang]'); // Changed to select all nav groups
-                const languagePanels = document.querySelectorAll('[data-language]');
-                const languageButtons = document.querySelectorAll('[data-lang-toggle]');
-                const footerBlocks = document.querySelectorAll('[data-footer-lang]');
-                const LANGS = ['en', 'am', 'ru', 'ua'];
-                const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
-                let activeLanguage = localStorage.getItem('deployhelp-language');
-                if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinksAll = document.querySelectorAll('[data-nav-lang]'); // Changed to select all nav groups
+            const languagePanels = document.querySelectorAll('[data-language]');
+            const languageButtons = document.querySelectorAll('[data-lang-toggle]');
+            const footerBlocks = document.querySelectorAll('[data-footer-lang]');
+            const LANGS = ['en', 'am', 'ru', 'ua'];
+            const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
+            let activeLanguage = localStorage.getItem('deployhelp-language');
+            if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
 
-                // Set dynamic years
-                const yearStr = new Date().getFullYear().toString();
-                ['En', 'Am', 'Ru', 'Ua'].forEach(id => {
-                    const el = document.getElementById('currentYear' + id);
-                    if (el) el.textContent = yearStr;
+            // Set dynamic years
+            const yearStr = new Date().getFullYear().toString();
+            ['En', 'Am', 'Ru', 'Ua'].forEach(id => {
+                const el = document.getElementById('currentYear' + id);
+                if (el) el.textContent = yearStr;
+            });
+
+            function setLanguage(lang) {
+                activeLanguage = lang;
+                document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
+
+                languagePanels.forEach(panel => {
+                    const isActive = panel.dataset.language === lang;
+                    panel.toggleAttribute('hidden', !isActive);
+                    panel.classList.toggle('is-active', isActive);
                 });
 
-                function setLanguage(lang) {
-                    activeLanguage = lang;
-                    document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
+                navLinksAll.forEach(nav => {
+                    const isActive = nav.dataset.navLang === lang;
+                    nav.toggleAttribute('hidden', !isActive);
+                });
 
-                    languagePanels.forEach(panel => {
-                        const isActive = panel.dataset.language === lang;
-                        panel.toggleAttribute('hidden', !isActive);
-                        panel.classList.toggle('is-active', isActive);
-                    });
-
-                    navLinksAll.forEach(nav => {
-                        const isActive = nav.dataset.navLang === lang;
-                        nav.toggleAttribute('hidden', !isActive);
-                    });
-
-                    footerBlocks.forEach(footer => {
-                        footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
-                    });
-
-                    languageButtons.forEach(button => {
-                        const isActive = button.dataset.langToggle === lang;
-                        button.classList.toggle('is-active', isActive);
-                        button.setAttribute('aria-pressed', String(isActive));
-                    });
-
-                    localStorage.setItem('deployhelp-language', lang);
-                }
+                footerBlocks.forEach(footer => {
+                    footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+                });
 
                 languageButtons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        const lang = button.dataset.langToggle;
-                        if (lang !== activeLanguage) setLanguage(lang);
-                    });
+                    const isActive = button.dataset.langToggle === lang;
+                    button.classList.toggle('is-active', isActive);
+                    button.setAttribute('aria-pressed', String(isActive));
                 });
 
-                setLanguage(activeLanguage);
+                localStorage.setItem('deployhelp-language', lang);
+            }
 
-                const year = new Date().getFullYear();
-                ['En', 'Am', 'Ru', 'Ua'].forEach(suffix => {
-                    const span = document.getElementById(`currentYear${suffix}`);
-                    if (span) span.textContent = year;
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.dataset.langToggle;
+                    if (lang !== activeLanguage) setLanguage(lang);
                 });
             });
+
+            setLanguage(activeLanguage);
+
+            const year = new Date().getFullYear();
+            ['En', 'Am', 'Ru', 'Ua'].forEach(suffix => {
+                const span = document.getElementById(`currentYear${suffix}`);
+                if (span) span.textContent = year;
+            });
+        });
     </script>
 
     <div id="dh-email-popup" class="dh-email-popup" aria-hidden="true">
@@ -1769,52 +1769,52 @@
         </div>
     </div>
     <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const popup = document.getElementById('dh-email-popup');
-                const gmailBtn = document.getElementById('dh-gmail-btn');
-                const outlookBtn = document.getElementById('dh-outlook-btn');
-                const yahooBtn = document.getElementById('dh-yahoo-btn');
-                const copyBtn = document.getElementById('dh-copy-btn');
-                const closeBtn = document.querySelector('.dh-popup-close');
-                const overlay = document.querySelector('.dh-popup-overlay');
-                let currentEmail = '';
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('dh-email-popup');
+            const gmailBtn = document.getElementById('dh-gmail-btn');
+            const outlookBtn = document.getElementById('dh-outlook-btn');
+            const yahooBtn = document.getElementById('dh-yahoo-btn');
+            const copyBtn = document.getElementById('dh-copy-btn');
+            const closeBtn = document.querySelector('.dh-popup-close');
+            const overlay = document.querySelector('.dh-popup-overlay');
+            let currentEmail = '';
 
-                document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        let rawEmail = link.getAttribute('href').replace('mailto:', '');
-                        let subject = '';
-                        if (rawEmail.includes('?')) {
-                            const parts = rawEmail.split('?');
-                            rawEmail = parts[0];
-                            const params = new URLSearchParams(parts[1]);
-                            subject = params.get('subject') || '';
-                        }
-                        currentEmail = rawEmail;
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let rawEmail = link.getAttribute('href').replace('mailto:', '');
+                    let subject = '';
+                    if (rawEmail.includes('?')) {
+                        const parts = rawEmail.split('?');
+                        rawEmail = parts[0];
+                        const params = new URLSearchParams(parts[1]);
+                        subject = params.get('subject') || '';
+                    }
+                    currentEmail = rawEmail;
 
-                        const to = encodeURIComponent(currentEmail);
-                        const subjStr = subject ? encodeURIComponent(subject) : '';
+                    const to = encodeURIComponent(currentEmail);
+                    const subjStr = subject ? encodeURIComponent(subject) : '';
 
-                        gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su=' + subjStr : ''}`;
-                        outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject=' + subjStr : ''}`;
-                        yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj=' + subjStr : ''}`;
+                    gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su=' + subjStr : ''}`;
+                    outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject=' + subjStr : ''}`;
+                    yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj=' + subjStr : ''}`;
 
-                        popup.classList.add('is-open');
-                    });
-                });
-
-                const closePopup = () => {
-                    popup.classList.remove('is-open');
-                    copyBtn.textContent = 'Copy Email Address';
-                };
-                closeBtn.addEventListener('click', closePopup);
-                overlay.addEventListener('click', closePopup);
-
-                copyBtn.addEventListener('click', () => {
-                    navigator.clipboard.writeText(currentEmail);
-                    copyBtn.textContent = 'COPIED!';
+                    popup.classList.add('is-open');
                 });
             });
+
+            const closePopup = () => {
+                popup.classList.remove('is-open');
+                copyBtn.textContent = 'Copy Email Address';
+            };
+            closeBtn.addEventListener('click', closePopup);
+            overlay.addEventListener('click', closePopup);
+
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(currentEmail);
+                copyBtn.textContent = 'COPIED!';
+            });
+        });
     </script>
 </body>
 
