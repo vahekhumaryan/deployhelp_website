@@ -595,7 +595,49 @@
                 animation: none !important;
             }
         }
+    
+        /* Email Popup Styles */
+        .dh-email-popup {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 10000;
+            display: flex; align-items: center; justify-content: center;
+            visibility: hidden; opacity: 0; transition: opacity 0.3s, visibility 0.3s;
+        }
+        .dh-email-popup.is-open {
+            visibility: visible; opacity: 1;
+        }
+        .dh-popup-overlay {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(22, 22, 22, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        .dh-popup-content {
+            position: relative;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            padding: 2rem;
+            box-shadow: var(--shadow-hover);
+            max-width: 400px; width: 90%;
+            transform: translateY(20px); transition: transform 0.3s;
+        }
+        .dh-email-popup.is-open .dh-popup-content {
+            transform: translateY(0);
+        }
+        .dh-popup-header {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .dh-popup-header h3 { margin: 0; font-size: 1.25rem; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-strong); }
+        .dh-popup-close {
+            background: none; border: none; font-size: 2rem; line-height: 1; margin-top: -10px; cursor: pointer; color: var(--muted); transition: color 0.2s;
+        }
+        .dh-popup-close:hover { color: var(--accent); }
+        .dh-popup-body {
+            display: grid; gap: 0.75rem;
+        }
+        .dh-popup-body .button { width: 100%; font-size: 0.95rem; }
     </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1708,6 +1750,71 @@
             });
         });
     </script>
+
+    <div id="dh-email-popup" class="dh-email-popup" aria-hidden="true">
+      <div class="dh-popup-overlay"></div>
+      <div class="dh-popup-content" role="dialog" aria-modal="true" aria-labelledby="dh-popup-title">
+        <div class="dh-popup-header">
+          <h3 id="dh-popup-title">Send Email via</h3>
+          <button class="dh-popup-close" aria-label="Close modal">×</button>
+        </div>
+        <div class="dh-popup-body">
+          <a href="#" id="dh-gmail-btn" target="_blank" rel="noopener" class="button ghost">Gmail</a>
+          <a href="#" id="dh-outlook-btn" target="_blank" rel="noopener" class="button ghost">Outlook</a>
+          <a href="#" id="dh-yahoo-btn" target="_blank" rel="noopener" class="button ghost">Yahoo</a>
+          <button id="dh-copy-btn" class="button primary" style="margin-top: 0.5rem;">Copy Email Address</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const popup = document.getElementById('dh-email-popup');
+        const gmailBtn = document.getElementById('dh-gmail-btn');
+        const outlookBtn = document.getElementById('dh-outlook-btn');
+        const yahooBtn = document.getElementById('dh-yahoo-btn');
+        const copyBtn = document.getElementById('dh-copy-btn');
+        const closeBtn = document.querySelector('.dh-popup-close');
+        const overlay = document.querySelector('.dh-popup-overlay');
+        let currentEmail = '';
+
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                let rawEmail = link.getAttribute('href').replace('mailto:', '');
+                let subject = '';
+                if (rawEmail.includes('?')) {
+                   const parts = rawEmail.split('?');
+                   rawEmail = parts[0];
+                   const params = new URLSearchParams(parts[1]);
+                   subject = params.get('subject') || '';
+                }
+                currentEmail = rawEmail;
+                
+                const to = encodeURIComponent(currentEmail);
+                const subjStr = subject ? encodeURIComponent(subject) : '';
+
+                gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su='+subjStr : ''}`;
+                outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject='+subjStr : ''}`;
+                yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj='+subjStr : ''}`;
+
+                popup.classList.add('is-open');
+            });
+        });
+
+        const closePopup = () => { 
+            popup.classList.remove('is-open'); 
+            copyBtn.textContent = 'Copy Email Address'; 
+        };
+        closeBtn.addEventListener('click', closePopup);
+        overlay.addEventListener('click', closePopup);
+        
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(currentEmail);
+            copyBtn.textContent = 'COPIED!';
+        });
+      });
+    </script>
 </body>
+
 
 </html>
