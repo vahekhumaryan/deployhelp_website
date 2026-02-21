@@ -192,27 +192,6 @@
             outline-offset: 2px;
         }
 
-        .nav-toggle {
-            display: none;
-            background: var(--surface);
-            border: 2px solid var(--border);
-            padding: 0.625rem;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-        }
-
-        .nav-toggle span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--border);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-toggle span+span {
-            margin-top: 6px;
-        }
 
         .nav-links {
             display: flex;
@@ -546,33 +525,18 @@
         }
 
         @media (max-width: 840px) {
-            .nav-toggle {
-                display: inline-flex;
-            }
-
             .nav-links {
-                position: fixed;
-                top: var(--header-height);
-                right: 0;
-                left: 0;
-                flex-direction: column;
-                align-items: stretch;
-                background: var(--bg);
-                padding: 2rem clamp(1rem, 4vw, 3rem);
-                border-top: 3px solid var(--border);
-                border-bottom: 3px solid var(--border);
-                transform: translateY(-130%);
-                transition: transform 0.3s ease;
-                box-shadow: 0 12px 0 var(--border);
-            }
-
-            .nav-links a {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                padding-top: 1rem;
                 width: 100%;
-                text-align: center;
             }
 
-            .nav-links.is-open {
-                transform: translateY(0);
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
             }
         }
 
@@ -783,12 +747,7 @@
                 <button type="button" class="language-button" data-lang-toggle="ru" aria-pressed="false">RU</button>
                 <button type="button" class="language-button" data-lang-toggle="ua" aria-pressed="false">UA</button>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNavEn"
-                aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
             <nav class="nav-links" id="primaryNavEn" data-nav-lang="en" aria-label="Primary navigation">
                 <a href="#en-cs">Customer Support</a>
                 <a href="#en-automation">Automation &amp; AI</a>
@@ -1733,7 +1692,6 @@
 
     <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const navToggle = document.getElementById('navToggle');
                 const navLinksAll = document.querySelectorAll('[data-nav-lang]'); // Changed to select all nav groups
                 const languagePanels = document.querySelectorAll('[data-language]');
                 const languageButtons = document.querySelectorAll('[data-lang-toggle]');
@@ -1750,29 +1708,6 @@
                     if (el) el.textContent = yearStr;
                 });
 
-                // Mobile nav toggle
-                if (navToggle) {
-                    navToggle.addEventListener('click', () => {
-                        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                        navToggle.setAttribute('aria-expanded', String(!isExpanded));
-                        document.body.classList.toggle('nav-open', !isExpanded); // Toggle body class for overlay/scroll lock
-                        navLinksAll.forEach(nav => {
-                            if (!nav.hidden) { // Only affect the currently visible nav
-                                nav.classList.toggle('is-open', !isExpanded);
-                            }
-                        });
-                    });
-                }
-
-                // Close mobile nav on link click
-                document.querySelectorAll('[data-nav-lang] a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        document.body.classList.remove('nav-open');
-                        navLinksAll.forEach(nav => nav.classList.remove('is-open'));
-                    });
-                });
-
                 function setLanguage(lang) {
                     activeLanguage = lang;
                     document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
@@ -1783,10 +1718,9 @@
                         panel.classList.toggle('is-active', isActive);
                     });
 
-                    navGroups.forEach(nav => {
+                    navLinksAll.forEach(nav => {
                         const isActive = nav.dataset.navLang === lang;
                         nav.toggleAttribute('hidden', !isActive);
-                        nav.classList.remove('is-open');
                     });
 
                     footerBlocks.forEach(footer => {
@@ -1799,42 +1733,24 @@
                         button.setAttribute('aria-pressed', String(isActive));
                     });
 
-                    const activeNav = getNav(lang);
-                    if (activeNav) navToggle.setAttribute('aria-controls', activeNav.id);
-                    closeNav();
                     localStorage.setItem('deployhelp-language', lang);
                 }
 
-                if (navToggle) {
-                    navToggle.addEventListener('click', () => {
-                        const nav = getNav();
-                        if (!nav) return;
-                        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                        navToggle.setAttribute('aria-expanded', String(!expanded));
-                        nav.classList.toggle('is-open');
-                        document.body.classList.toggle('nav-open', !expanded);
-                    });
-                }
-
-                document.querySelectorAll('[data-nav-lang] a').forEach(link => {
-                    link.addEventListener('click', () => { closeNav(); });
-                });
-
-             lan guage Buttons.forEach(button => {
+                languageButtons.forEach(button => {
                     button.addEventListener('click', () => {
                         const lang = button.dataset.langToggle;
-                        ifng !== activeLanguage) setLanguage(lang);
+                        if (lang !== activeLanguage) setLanguage(lang);
+                    });
+                });
+
+                setLanguage(activeLanguage);
+
+                const year = new Date().getFullYear();
+                ['En', 'Am', 'Ru', 'Ua'].forEach(suffix => {
+                    const span = document.getElementById(`currentYear${suffix}`);
+                    if (span) span.textContent = year;
                 });
             });
-
-            setLanguage(activeLanguage);
-
-            const year = new Date().getFullYear();
-            ['En', 'Am', 'Ru', 'Ua'].forEach(suffix => {
-                const span = document.getElementById(`currentYear${suffix}`);
-                if (span) span.textContent = year;
-            });
-        });
     </script>
 
     <div id="dh-email-popup" class="dh-email-popup" aria-hidden="true">
@@ -1853,52 +1769,52 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const popup = document.getElementById('dh-email-popup');
-            const gmailBtn = document.getElementById('dh-gmail-btn');
-            const outlookBtn = document.getElementById('dh-outlook-btn');
-            const yahooBtn = document.getElementById('dh-yahoo-btn');
-            const copyBtn = document.getElementById('dh-copy-btn');
-            const closeBtn = document.querySelector('.dh-popup-close');
-            const overlay = document.querySelector('.dh-popup-overlay');
-            let currentEmail = '';
+            document.addEventListener('DOMContentLoaded', () => {
+                const popup = document.getElementById('dh-email-popup');
+                const gmailBtn = document.getElementById('dh-gmail-btn');
+                const outlookBtn = document.getElementById('dh-outlook-btn');
+                const yahooBtn = document.getElementById('dh-yahoo-btn');
+                const copyBtn = document.getElementById('dh-copy-btn');
+                const closeBtn = document.querySelector('.dh-popup-close');
+                const overlay = document.querySelector('.dh-popup-overlay');
+                let currentEmail = '';
 
-            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    let rawEmail = link.getAttribute('href').replace('mailto:', '');
-                    let subject = '';
-                    if (rawEmail.includes('?')) {
-                        const parts = rawEmail.split('?');
-                        rawEmail = parts[0];
-                        const params = new URLSearchParams(parts[1]);
-                        subject = params.get('subject') || '';
-                    }
-                    currentEmail = rawEmail;
+                document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        let rawEmail = link.getAttribute('href').replace('mailto:', '');
+                        let subject = '';
+                        if (rawEmail.includes('?')) {
+                            const parts = rawEmail.split('?');
+                            rawEmail = parts[0];
+                            const params = new URLSearchParams(parts[1]);
+                            subject = params.get('subject') || '';
+                        }
+                        currentEmail = rawEmail;
 
-                    const to = encodeURIComponent(currentEmail);
-                    const subjStr = subject ? encodeURIComponent(subject) : '';
+                        const to = encodeURIComponent(currentEmail);
+                        const subjStr = subject ? encodeURIComponent(subject) : '';
 
-                    gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su=' + subjStr : ''}`;
-                    outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject=' + subjStr : ''}`;
-                    yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj=' + subjStr : ''}`;
+                        gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${subjStr ? '&su=' + subjStr : ''}`;
+                        outlookBtn.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}${subjStr ? '&subject=' + subjStr : ''}`;
+                        yahooBtn.href = `https://compose.mail.yahoo.com/?to=${to}${subjStr ? '&subj=' + subjStr : ''}`;
 
-                    popup.classList.add('is-open');
+                        popup.classList.add('is-open');
+                    });
+                });
+
+                const closePopup = () => {
+                    popup.classList.remove('is-open');
+                    copyBtn.textContent = 'Copy Email Address';
+                };
+                closeBtn.addEventListener('click', closePopup);
+                overlay.addEventListener('click', closePopup);
+
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(currentEmail);
+                    copyBtn.textContent = 'COPIED!';
                 });
             });
-
-            const closePopup = () => {
-                popup.classList.remove('is-open');
-                copyBtn.textContent = 'Copy Email Address';
-            };
-            closeBtn.addEventListener('click', closePopup);
-            overlay.addEventListener('click', closePopup);
-
-            copyBtn.addEventListener('click', () => {
-                navigator.clipboard.writeText(currentEmail);
-                copyBtn.textContent = 'COPIED!';
-            });
-        });
     </script>
 </body>
 
