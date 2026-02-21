@@ -5,10 +5,8 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-ZNC2C0HYVQ');
+          window.dataLayer = window.dataLayer || []            function gt a g() { dataLayer.push(argum et                gtag('js', new D        ;
+        gtag('config', 'G-ZNC2VQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -514,8 +512,11 @@
         }
 
         .footer-nav {
-            display: grid;
-            gap: 0.6rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: flex-end;
         }
 
         .footer-nav a {
@@ -578,11 +579,20 @@
         @media (max-width: 620px) {
             .footer-top {
                 flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-nav {
+                justify-content: center;
             }
 
             .footer-bottom {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
             }
         }
 
@@ -595,47 +605,94 @@
                 animation: none !important;
             }
         }
-    
+
         /* Email Popup Styles */
         .dh-email-popup {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             z-index: 10000;
-            display: flex; align-items: center; justify-content: center;
-            visibility: hidden; opacity: 0; transition: opacity 0.3s, visibility 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
         }
+
         .dh-email-popup.is-open {
-            visibility: visible; opacity: 1;
+            visibility: visible;
+            opacity: 1;
         }
+
         .dh-popup-overlay {
-            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: rgba(22, 22, 22, 0.6);
             backdrop-filter: blur(4px);
         }
+
         .dh-popup-content {
             position: relative;
             background: var(--surface);
             border: 2px solid var(--border);
             padding: 2rem;
             box-shadow: var(--shadow-hover);
-            max-width: 400px; width: 90%;
-            transform: translateY(20px); transition: transform 0.3s;
+            max-width: 400px;
+            width: 90%;
+            transform: translateY(20px);
+            transition: transform 0.3s;
         }
+
         .dh-email-popup.is-open .dh-popup-content {
             transform: translateY(0);
         }
+
         .dh-popup-header {
-            display: flex; justify-content: space-between; align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 1.5rem;
         }
-        .dh-popup-header h3 { margin: 0; font-size: 1.25rem; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-strong); }
+
+        .dh-popup-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-strong);
+        }
+
         .dh-popup-close {
-            background: none; border: none; font-size: 2rem; line-height: 1; margin-top: -10px; cursor: pointer; color: var(--muted); transition: color 0.2s;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            line-height: 1;
+            margin-top: -10px;
+            cursor: pointer;
+            color: var(--muted);
+            transition: color 0.2s;
         }
-        .dh-popup-close:hover { color: var(--accent); }
+
+        .dh-popup-close:hover {
+            color: var(--accent);
+        }
+
         .dh-popup-body {
-            display: grid; gap: 0.75rem;
+            display: grid;
+            gap: 0.75rem;
         }
-        .dh-popup-body .button { width: 100%; font-size: 0.95rem; }
+
+        .dh-popup-body .button {
+            width: 100%;
+            font-size: 0.95rem;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -934,9 +991,11 @@
                             <h3>Our Stack</h3>
                             <p>Specs &amp; Experience.</p>
                             <ul>
-                                <li><strong>Platforms:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
+                                <li><strong>Platforms:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk,
+                                    Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Languages:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Logic:</strong> Automations, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
+                                <li><strong>Logic:</strong> Automations, Webhooks, APIs, Make.com, Zapier, n8n, Workato
+                                </li>
                                 <li><strong>Specialty:</strong> Applied GenAI &amp; Chatbots</li>
                             </ul>
                         </article>
@@ -1143,9 +1202,11 @@
                             <h3>Մեր Տեխնոլոգիաները</h3>
                             <p>Գործիքակազմ և Փորձ։</p>
                             <ul>
-                                <li><strong>Հարթակներ:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
+                                <li><strong>Հարթակներ:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk,
+                                    Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Լեզուներ:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Տրամաբանություն:</strong> Ավտոմատացում, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
+                                <li><strong>Տրամաբանություն:</strong> Ավտոմատացում, Webhooks, APIs, Make.com, Zapier,
+                                    n8n, Workato</li>
                                 <li><strong>Մասնագիտացում:</strong> Կիրառական ԱԲ և Չաթբոթեր</li>
                             </ul>
                         </article>
@@ -1350,9 +1411,11 @@
                             <h3>Наш Стек</h3>
                             <p>Инструменты и Опыт.</p>
                             <ul>
-                                <li><strong>Платформы:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
+                                <li><strong>Платформы:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk,
+                                    Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Языки:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Логика:</strong> Автоматизация, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
+                                <li><strong>Логика:</strong> Автоматизация, Webhooks, APIs, Make.com, Zapier, n8n,
+                                    Workato</li>
                                 <li><strong>Специализация:</strong> Прикладной ИИ и Чат-боты</li>
                             </ul>
                         </article>
@@ -1555,9 +1618,11 @@
                             <h3>Наш Стек</h3>
                             <p>Інструменти та Досвід.</p>
                             <ul>
-                                <li><strong>Платформи:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
+                                <li><strong>Платформи:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk,
+                                    Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Мови:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Логіка:</strong> Автоматизація, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
+                                <li><strong>Логіка:</strong> Автоматизація, Webhooks, APIs, Make.com, Zapier, n8n,
+                                    Workato</li>
                                 <li><strong>Спеціалізація:</strong> Прикладний ШІ та Чат-боти</li>
                             </ul>
                         </article>
@@ -1734,10 +1799,10 @@
                 link.addEventListener('click', () => { closeNav(); });
             });
 
-            languageButtons.forEach(button => {
+             lan guage Buttons.forEach(button => {
                 button.addEventListener('click', () => {
                     const lang = button.dataset.langToggle;
-                    if (lang && lang !== activeLanguage) setLanguage(lang);
+                    ifng  !== activeLanguage) setLanguage(lang);
                 });
             });
 
@@ -1752,19 +1817,19 @@
     </script>
 
     <div id="dh-email-popup" class="dh-email-popup" aria-hidden="true">
-      <div class="dh-popup-overlay"></div>
-      <div class="dh-popup-content" role="dialog" aria-modal="true" aria-labelledby="dh-popup-title">
-        <div class="dh-popup-header">
-          <h3 id="dh-popup-title">Send Email via</h3>
-          <button class="dh-popup-close" aria-label="Close modal">×</button>
+        <div class="dh-popup-overlay"></div>
+        <div class="dh-popup-content" role="dialog" aria-modal="true" aria-labelledby="dh-popup-title">
+            <div class="dh-popup-header">
+                <h3 id="dh-popup-title">Send Email via</h3>
+                <button class="dh-popup-close" aria-label="Close modal">×</button>
+            </div>
+            <div class="dh-popup-body">
+                <a href="#" id="dh-gmail-btn" target="_blank" rel="noopener" class="button ghost">Gmail</a>
+                <a href="#" id="dh-outlook-btn" target="_blank" rel="noopener" class="button ghost">Outlook</a>
+                <a href="#" id="dh-yahoo-btn" target="_blank" rel="noopener" class="button ghost">Yahoo</a>
+                <button id="dh-copy-btn" class="button primary" style="margin-top: 0.5rem;">Copy Email Address</button>
+            </div>
         </div>
-        <div class="dh-popup-body">
-          <a href="#" id="dh-gmail-btn" target="_blank" rel="noopener" class="button ghost">Gmail</a>
-          <a href="#" id="dh-outlook-btn" target="_blank" rel="noopener" class="button ghost">Outlook</a>
-          <a href="#" id="dh-yahoo-btn" target="_blank" rel="noopener" class="button ghost">Yahoo</a>
-          <button id="dh-copy-btn" class="button primary" style="margin-top: 0.5rem;">Copy Email Address</button>
-        </div>
-      </div>
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
