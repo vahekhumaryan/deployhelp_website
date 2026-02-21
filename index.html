@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNC2C0HYVQ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-ZNC2C0HYVQ');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZNC2C0HYVQ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DEPLOYHELP LLC helps teams implement Zendesk, chatbots, help centers, and business automation in English, Armenian, Russian, and Ukrainian. Customer support consulting, AI transformation, and workflow automation."/>
-    <meta name="keywords" content="Zendesk implementation, customer support consulting, chatbots, help center, business automation, Armenian, Russian, Ukrainian, English, DEPLOYHELP LLC">
+    <meta name="description"
+        content="DEPLOYHELP LLC helps teams implement Zendesk, chatbots, help centers, and business automation in English, Armenian, Russian, and Ukrainian. Customer support consulting, AI transformation, and workflow automation." />
+    <meta name="keywords"
+        content="Zendesk implementation, customer support consulting, chatbots, help center, business automation, Armenian, Russian, Ukrainian, English, DEPLOYHELP LLC">
     <meta name="author" content="DEPLOYHELP LLC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://deployhelp.com/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta property="og:title" content="DEPLOYHELP LLC | Customer Support &amp; Automation Consulting">
-    <meta property="og:description" content="Bilingual and multilingual customer support, Zendesk rollouts, chatbots, and business automation services from DEPLOYHELP LLC."/>
+    <meta property="og:description"
+        content="Bilingual and multilingual customer support, Zendesk rollouts, chatbots, and business automation services from DEPLOYHELP LLC." />
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deployhelp.com">
     <meta property="og:image" content="https://deployhelp.com/og-image.jpg">
     <meta property="og:site_name" content="DEPLOYHELP LLC">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DEPLOYHELP LLC | Customer Support &amp; Automation Consulting">
-    <meta name="twitter:description" content="Zendesk and chatbot implementation, help center builds, agent training, and business automation in English, Armenian, Russian, and Ukrainian.">
+    <meta name="twitter:description"
+        content="Zendesk and chatbot implementation, help center builds, agent training, and business automation in English, Armenian, Russian, and Ukrainian.">
     <meta name="twitter:image" content="https://deployhelp.com/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <title>DEPLOYHELP LLC | Customer Support &amp; Automation Consulting</title>
     <style>
-        *, *::before, *::after { box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
         :root {
             --bg: #f7f5f0;
@@ -54,7 +65,10 @@
             --header-height: 76px;
         }
 
-        html { font-size: 16px; scroll-behavior: smooth; }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
@@ -66,11 +80,30 @@
             min-height: 100vh;
         }
 
-        body.nav-open { overflow: hidden; }
-        img, svg { max-width: 100%; height: auto; display: block; }
-        a { color: inherit; }
-        a:hover, a:focus-visible { color: var(--accent); }
-        ::selection { background: var(--accent); color: var(--surface); }
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--accent);
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--surface);
+        }
 
         .skip-link {
             position: absolute;
@@ -84,7 +117,9 @@
             z-index: 1001;
         }
 
-        .skip-link:focus { top: 1rem; }
+        .skip-link:focus {
+            top: 1rem;
+        }
 
         .site-header {
             position: sticky;
@@ -98,7 +133,7 @@
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 clamp(1rem, 3vw, 2.5rem);
+            padding: 0 clamp(1rem, 3vw, 1.5rem);
         }
 
         .nav-container {
@@ -120,7 +155,10 @@
             letter-spacing: 0.12em;
         }
 
-        .brand span:last-child { font-size: 0.875rem; letter-spacing: 0.2em; }
+        .brand span:last-child {
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+        }
 
         .language-switch {
             display: inline-flex;
@@ -142,9 +180,19 @@
             cursor: pointer;
         }
 
-        .language-button + .language-button { border-left: 2px solid var(--border); }
-        .language-button.is-active { background: var(--accent); color: var(--surface); }
-        .language-button:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
+        .language-button+.language-button {
+            border-left: 2px solid var(--border);
+        }
+
+        .language-button.is-active {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .language-button:focus-visible {
+            outline: 2px solid var(--accent-strong);
+            outline-offset: 2px;
+        }
 
         .nav-toggle {
             display: none;
@@ -164,7 +212,9 @@
             transition: transform 0.3s ease;
         }
 
-        .nav-toggle span + span { margin-top: 6px; }
+        .nav-toggle span+span {
+            margin-top: 6px;
+        }
 
         .nav-links {
             display: flex;
@@ -175,7 +225,10 @@
             font-weight: 600;
             letter-spacing: 0.08em;
         }
-        .nav-links[hidden] { display: none !important; }
+
+        .nav-links[hidden] {
+            display: none !important;
+        }
 
         .nav-links a {
             text-decoration: none;
@@ -193,15 +246,37 @@
             box-shadow: 9px 9px 0 var(--border);
         }
 
-        .nav-links .cta-link { background: var(--accent); color: var(--surface); }
-        .nav-links .cta-link:hover,
-        .nav-links .cta-link:focus-visible { background: var(--accent-strong); color: var(--surface); }
+        .nav-links .cta-link {
+            background: var(--accent);
+            color: var(--surface);
+        }
 
-        main { display: block; }
-        section { padding: clamp(4rem, 10vw, 7rem) 0; position: relative; }
-        section:target { scroll-margin-top: calc(var(--header-height) + 2rem); }
-        .language-panel[hidden] { display: none; }
-        .language-panel.is-active { display: block; }
+        .nav-links .cta-link:hover,
+        .nav-links .cta-link:focus-visible {
+            background: var(--accent-strong);
+            color: var(--surface);
+        }
+
+        main {
+            display: block;
+        }
+
+        section {
+            padding: clamp(3rem, 6vw, 4rem) 0;
+            position: relative;
+        }
+
+        section:target {
+            scroll-margin-top: calc(var(--header-height) + 1rem);
+        }
+
+        .language-panel[hidden] {
+            display: none;
+        }
+
+        .language-panel.is-active {
+            display: block;
+        }
 
         .eyebrow {
             font-family: 'IBM Plex Mono', monospace;
@@ -212,26 +287,54 @@
             color: var(--accent-strong);
         }
 
-        .section-header { max-width: 780px; margin-bottom: clamp(2rem, 5vw, 3rem); }
-        .section-header h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.1; margin: 0 0 1rem; }
-        .section-header p { font-size: clamp(1rem, 2.6vw, 1.2rem); color: var(--muted); margin: 0; }
+        .section-header {
+            max-width: 780px;
+            margin-bottom: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.1;
+            margin: 0 0 0.8rem;
+        }
+
+        .section-header p {
+            font-size: clamp(1rem, 2.6vw, 1.2rem);
+            color: var(--muted);
+            margin: 0;
+        }
 
         .hero {
-            padding-top: clamp(6rem, 10vw, 8rem);
+            padding-top: clamp(4rem, 8vw, 6rem);
             background: var(--surface);
             border-bottom: 2px solid var(--border);
         }
 
         .hero-container {
             display: grid;
-            gap: clamp(2.5rem, 6vw, 4rem);
+            gap: clamp(1.5rem, 4vw, 2.5rem);
             grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
             align-items: stretch;
         }
 
-        .hero-copy h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.1; margin: 0 0 1.2rem; }
-        .hero-lede { font-size: clamp(1.05rem, 2.5vw, 1.25rem); color: var(--muted); margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
-        .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: clamp(1.8rem, 4vw, 2.6rem); }
+        .hero-copy h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            margin: 0 0 1rem;
+        }
+
+        .hero-lede {
+            font-size: clamp(1.05rem, 2.5vw, 1.15rem);
+            color: var(--muted);
+            margin-bottom: clamp(1.2rem, 3vw, 2rem);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        }
 
         .button {
             display: inline-flex;
@@ -248,54 +351,204 @@
             transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
         }
 
-        .button.primary { background: var(--accent); color: var(--surface); }
-        .button.ghost { background: var(--surface-strong); }
+        .button.primary {
+            background: var(--accent);
+            color: var(--surface);
+        }
+
+        .button.ghost {
+            background: var(--surface-strong);
+        }
+
         .button:hover,
-        .button:focus-visible { transform: translate(-4px, -4px); box-shadow: var(--shadow-hover); }
+        .button:focus-visible {
+            transform: translate(-4px, -4px);
+            box-shadow: var(--shadow-hover);
+        }
 
         .hero-note {
             border: 2px solid var(--border);
             background: var(--surface-strong);
-            padding: clamp(1.5rem, 3vw, 2rem);
+            padding: clamp(1.2rem, 2.5vw, 1.5rem);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.8rem;
             box-shadow: var(--shadow);
         }
 
-        .hero-note h2 { font-size: 1.3rem; margin: 0; }
-        .hero-note ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.95rem; }
-        .hero-note li::before { content: '▢'; margin-right: 0.6rem; color: var(--accent); }
-        .hero-note-footnote { font-size: 0.9rem; color: var(--muted); margin-top: auto; }
+        .hero-note h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
 
-        .card-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-        .card { border: 2px solid var(--border); background: var(--surface); padding: clamp(1.5rem, 3vw, 2rem); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 0.9rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hero-note ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.6rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .hero-note li::before {
+            content: '▢';
+            margin-right: 0.6rem;
+            color: var(--accent);
+        }
+
+        .hero-note-footnote {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: auto;
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .card {
+            border: 2px solid var(--border);
+            background: var(--surface);
+            padding: clamp(1.2rem, 2.5vw, 1.5rem);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
         .card:hover,
-        .card:focus-within { transform: translate(-6px, -6px); box-shadow: var(--shadow-hover); }
-        .card h3 { font-size: 1.45rem; margin: 0; }
-        .card p { margin: 0; color: var(--muted); }
-        .card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.95rem; }
-        .card ul li::before { content: '+'; margin-right: 0.75rem; color: var(--accent); }
+        .card:focus-within {
+            transform: translate(-6px, -6px);
+            box-shadow: var(--shadow-hover);
+        }
 
-        .contact-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-        .contact-card { border: 2px solid var(--border); background: var(--surface-accent); padding: clamp(1.5rem, 3vw, 2rem); box-shadow: var(--shadow); display: grid; gap: 0.75rem; }
-        .contact-card h3 { margin: 0; font-size: 1.2rem; }
-        .contact-card p { margin: 0; color: var(--muted); }
-        .contact-card a { text-decoration: none; color: var(--border); font-weight: 600; }
+        .card h3 {
+            font-size: 1.45rem;
+            margin: 0;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .card ul li::before {
+            content: '+';
+            margin-right: 0.75rem;
+            color: var(--accent);
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .contact-card {
+            border: 2px solid var(--border);
+            background: var(--surface-accent);
+            padding: clamp(1.2rem, 2.5vw, 1.5rem);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .contact-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .contact-card a {
+            text-decoration: none;
+            color: var(--border);
+            font-weight: 600;
+        }
+
         .contact-card a:hover,
-        .contact-card a:focus-visible { color: var(--accent); }
+        .contact-card a:focus-visible {
+            color: var(--accent);
+        }
 
-        footer { border-top: 2px solid var(--border); background: var(--surface); padding: clamp(2rem, 4vw, 3rem) 0; }
-        footer [hidden] { display: none; }
-        .footer-top { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
-        .footer-brand { font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.12em; }
-        .footer-nav { display: grid; gap: 0.6rem; }
-        .footer-nav a { text-decoration: none; font-weight: 600; }
-        .footer-bottom { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        footer {
+            border-top: 2px solid var(--border);
+            background: var(--surface);
+            padding: clamp(1.5rem, 3vw, 2rem) 0;
+        }
 
-        @media (max-width: 980px) { .hero-container { grid-template-columns: 1fr; } .hero-note { order: -1; } }
+        footer [hidden] {
+            display: none;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .footer-nav {
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 980px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-note {
+                order: -1;
+            }
+        }
+
         @media (max-width: 840px) {
-            .nav-toggle { display: inline-flex; }
+            .nav-toggle {
+                display: inline-flex;
+            }
+
             .nav-links {
                 position: fixed;
                 top: var(--header-height);
@@ -311,16 +564,37 @@
                 transition: transform 0.3s ease;
                 box-shadow: 0 12px 0 var(--border);
             }
-            .nav-links a { width: 100%; text-align: center; }
-            .nav-links.is-open { transform: translateY(0); }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.is-open {
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 620px) {
-            .footer-top { flex-direction: column; }
-            .footer-bottom { flex-direction: column; align-items: flex-start; }
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
-        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -394,6 +668,7 @@
     }
     </script>
 </head>
+
 <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" role="banner">
@@ -403,12 +678,14 @@
                 <span>LLC</span>
             </a>
             <div class="language-switch" role="group" aria-label="Language selector">
-                <button type="button" class="language-button is-active" data-lang-toggle="en" aria-pressed="true">EN</button>
+                <button type="button" class="language-button is-active" data-lang-toggle="en"
+                    aria-pressed="true">EN</button>
                 <button type="button" class="language-button" data-lang-toggle="am" aria-pressed="false">AM</button>
                 <button type="button" class="language-button" data-lang-toggle="ru" aria-pressed="false">RU</button>
                 <button type="button" class="language-button" data-lang-toggle="ua" aria-pressed="false">UA</button>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNavEn" aria-expanded="false">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="primaryNavEn"
+                aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -434,7 +711,8 @@
                 <a href="#ru-methodology">Методология и Стек</a>
                 <a href="#ru-contact" class="cta-link">Связаться</a>
             </nav>
-            <nav class="nav-links" id="primaryNavUa" data-nav-lang="ua" aria-label="Primary navigation Ukrainian" hidden>
+            <nav class="nav-links" id="primaryNavUa" data-nav-lang="ua" aria-label="Primary navigation Ukrainian"
+                hidden>
                 <a href="#ua-cs">Підтримка</a>
                 <a href="#ua-automation">Автоматизація</a>
                 <a href="#ua-digital">Цифрове зростання</a>
@@ -451,14 +729,18 @@
                     <div class="hero-copy">
                         <p class="eyebrow">Customer support &amp; automation for scrappy teams</p>
                         <h1 id="en-hero-title">DeployHelp keeps support simple while you scale.</h1>
-                        <p class="hero-lede">Whether you run a neighbourhood delivery shop, a SaaS beta, or a coworking space with a packed inbox, we keep the queue moving and spin up the digital basics you still need.</p>
+                        <p class="hero-lede">Whether you run a neighbourhood delivery shop, a SaaS beta, or a coworking
+                            space with a packed inbox, we keep the queue moving and spin up the digital basics you still
+                            need.</p>
                         <div class="hero-cta" role="group" aria-label="Primary calls to action">
-                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Talk%20to%20DEPLOYHELP">Talk to us</a>
+                            <a class="button primary"
+                                href="mailto:contact@deployhelp.com?subject=Talk%20to%20DEPLOYHELP">Talk to us</a>
                             <a class="button ghost" href="#en-cs">See what we fix</a>
                         </div>
                         <aside class="hero-note" aria-label="Focus areas">
                             <h2>AI copilots, human operators, one crew.</h2>
-                            <p class="hero-note-footnote">We blend automation with lived support instincts so your queue stays quick and welcoming.</p>
+                            <p class="hero-note-footnote">We blend automation with lived support instincts so your queue
+                                stays quick and welcoming.</p>
                         </aside>
                     </div>
                 </div>
@@ -469,7 +751,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Customer support</p>
                         <h2 id="en-cs-title">Support playbooks that stay light but scale with you.</h2>
-                        <p>We build structure without the bureaucracy: clear roles, tidy dashboards, and room to improvise when you need it.</p>
+                        <p>We build structure without the bureaucracy: clear roles, tidy dashboards, and room to
+                            improvise when you need it.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -508,7 +791,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Automation &amp; AI</p>
                         <h2 id="en-automation-title">Automation that frees you from copy/paste and checklist limbo.</h2>
-                        <p>We mix AI assistants with pragmatic automation so your team can do the human bits and skip the boilerplate.</p>
+                        <p>We mix AI assistants with pragmatic automation so your team can do the human bits and skip
+                            the boilerplate.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -586,26 +870,31 @@
                     <div class="section-header">
                         <p class="eyebrow">Methodology &amp; Stack</p>
                         <h2 id="en-methodology-title">How we work and what we use.</h2>
-                        <p>We audit the mess, agree on the optimal path, and then we build it—using the best tools for the job.</p>
+                        <p>We audit the mess, agree on the optimal path, and then we build it—using the best tools for
+                            the job.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
                             <h3>Our Protocol</h3>
                             <p>Zero-BS execution plan.</p>
                             <ul>
-                                <li><strong>1: Decrypt</strong> &mdash; Deep dive into your messy workflows to find friction.</li>
-                                <li><strong>2: Compile</strong> &mdash; Draft the architecture and webhook logic to fix the gap.</li>
-                                <li><strong>3: Deploy</strong> &mdash; Configure platforms and push logic to staging.</li>
-                                <li><strong>4: Monitor</strong> &mdash; Measure impact, tweak prompts, and dial in routing.</li>
+                                <li><strong>1: Decrypt</strong> &mdash; Deep dive into your messy workflows to find
+                                    friction.</li>
+                                <li><strong>2: Compile</strong> &mdash; Draft the architecture and webhook logic to fix
+                                    the gap.</li>
+                                <li><strong>3: Deploy</strong> &mdash; Configure platforms and push logic to staging.
+                                </li>
+                                <li><strong>4: Monitor</strong> &mdash; Measure impact, tweak prompts, and dial in
+                                    routing.</li>
                             </ul>
                         </article>
                         <article class="card">
                             <h3>Our Stack</h3>
                             <p>Specs &amp; Experience.</p>
                             <ul>
-                                <li><strong>Platforms:</strong> Zendesk, Jira, Intercom, HubSpot</li>
+                                <li><strong>Platforms:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Languages:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Logic:</strong> Automations, Webhooks, APIs</li>
+                                <li><strong>Logic:</strong> Automations, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
                                 <li><strong>Specialty:</strong> Applied GenAI &amp; Chatbots</li>
                             </ul>
                         </article>
@@ -618,7 +907,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Contact</p>
                         <h2 id="en-contact-title">Tell us what you’re building. We’ll help keep it tidy.</h2>
-                        <p>Drop a note about the tools you use, the volume you handle, or the problem that keeps reappearing. We reply within one business day.</p>
+                        <p>Drop a note about the tools you use, the volume you handle, or the problem that keeps
+                            reappearing. We reply within one business day.</p>
                     </div>
                     <div class="contact-grid">
                         <div class="contact-card">
@@ -629,11 +919,13 @@
                         <div class="contact-card">
                             <h3>Support starter session</h3>
                             <p>45 minutes to map your current queue and the quick wins.</p>
-                            <a href="mailto:contact@deployhelp.com?subject=Support%20Starter%20Session">Book a session</a>
+                            <a href="mailto:contact@deployhelp.com?subject=Support%20Starter%20Session">Book a
+                                session</a>
                         </div>
                         <div class="contact-card">
                             <h3>Automation sketch call</h3>
-                            <p>Bring one workflow outside support. We’ll sketch the bots, guardrails, and dashboards.</p>
+                            <p>Bring one workflow outside support. We’ll sketch the bots, guardrails, and dashboards.
+                            </p>
                             <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Plan a call</a>
                         </div>
                     </div>
@@ -646,14 +938,17 @@
                     <div class="hero-copy">
                         <p class="eyebrow">Հաճախորդների աջակցություն և ավտոմատացում փոքր թիմերի համար</p>
                         <h1 id="am-hero-title">DeployHelp-ը պահում է աջակցությունը կարգին, անգամ երբ արագ աճում եք։</h1>
-                        <p class="hero-lede">Թաղային առաքում, օնլայն խանութ թե նոր SaaS՝ մենք արագ կարգավորում ենք հերթերը և կառուցում այն թվային հիմքը, որ դեռ չկա։</p>
+                        <p class="hero-lede">Թաղային առաքում, օնլայն խանութ թե նոր SaaS՝ մենք արագ կարգավորում ենք
+                            հերթերը և կառուցում այն թվային հիմքը, որ դեռ չկա։</p>
                         <div class="hero-cta" role="group" aria-label="Գլխավոր գործողություններ">
-                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Կապ%20DEPLOYHELP">Գրեք մեզ</a>
+                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Կապ%20DEPLOYHELP">Գրեք
+                                մեզ</a>
                             <a class="button ghost" href="#am-cs">Տեսնել լուծումները</a>
                         </div>
                         <aside class="hero-note" aria-label="Հիմնական ուղղություններ">
                             <h2>ԱԲ-ը կողքիդ, փորձը՝ ղեկին։</h2>
-                            <p class="hero-note-footnote">Ավտոմատացումը և փորձառու մասնագետների մոտեցումը պահում են աջակցությունը արագ ու մարդավարի։</p>
+                            <p class="hero-note-footnote">Ավտոմատացումը և փորձառու մասնագետների մոտեցումը պահում են
+                                աջակցությունը արագ ու մարդավարի։</p>
                         </aside>
                     </div>
                 </div>
@@ -664,7 +959,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Հաճախորդների աջակցություն</p>
                         <h2 id="am-cs-title">Աջակցություն, որը զարգանում է ձեր թիմի հետ։</h2>
-                        <p>Կազմակերպում ենք աջակցությունը առանց ավելորդ բյուրոկրատիայի՝ հստակ դերեր, պարզ վահանակներ և տարածք փորձարկելու համար։</p>
+                        <p>Կազմակերպում ենք աջակցությունը առանց ավելորդ բյուրոկրատիայի՝ հստակ դերեր, պարզ վահանակներ և
+                            տարածք փորձարկելու համար։</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -702,8 +998,10 @@
                 <div class="container">
                     <div class="section-header">
                         <p class="eyebrow">Ավտոմատացում &amp; ԱԲ</p>
-                        <h2 id="am-automation-title">Ավտոմատացում, որը ազատում է copy/paste-ից ու անվերջ ցուցակներից։</h2>
-                        <p>Միավորում ենք ԱԲ օգնականներին և մանրամասն ավտոմատացումները, որպեսզի թիմը զբաղվի մարդկանցով, ոչ թե ռուտինայով։</p>
+                        <h2 id="am-automation-title">Ավտոմատացում, որը ազատում է copy/paste-ից ու անվերջ ցուցակներից։
+                        </h2>
+                        <p>Միավորում ենք ԱԲ օգնականներին և մանրամասն ավտոմատացումները, որպեսզի թիմը զբաղվի մարդկանցով,
+                            ոչ թե ռուտինայով։</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -730,7 +1028,8 @@
                             <ul>
                                 <li>Ապրող SLA, տարհանման և կուտակների ցուցիչներ մեկ վայրում</li>
                                 <li>Շաբաթական ավտոմատ ամփոփումներ՝ «սա փորձեք» առաջարկներով</li>
-                                <li>Փոփոխությունների ցանկ, որը կապում է եկամուտը, մարժան և աջակցության ծանրաբեռնվածությունը</li>
+                                <li>Փոփոխությունների ցանկ, որը կապում է եկամուտը, մարժան և աջակցության
+                                    ծանրաբեռնվածությունը</li>
                             </ul>
                         </article>
                     </div>
@@ -742,7 +1041,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Թվային աճ</p>
                         <h2 id="am-digital-title">Կայքեր, SEO և բովանդակության ավտոպիլոտ՝ փոքր թիմերի համար։</h2>
-                        <p>Արագ տալիս ենք հիմքը և թողնում պարզ քայլեր, որ շարունակեք ինքնուրույն՝ առանց կորպորատիվ թղթաբանության։</p>
+                        <p>Արագ տալիս ենք հիմքը և թողնում պարզ քայլեր, որ շարունակեք ինքնուրույն՝ առանց կորպորատիվ
+                            թղթաբանության։</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -788,9 +1088,12 @@
                             <h3>Մեր Արձանագրությունը</h3>
                             <p>Հստակ իրագործման պլան։</p>
                             <ul>
-                                <li><strong>1: Վերլուծություն</strong> &mdash; Խորասուզում ձեր աշխատանքային հոսքերի մեջ՝ գտնելու խնդիրները։</li>
-                                <li><strong>2: Նախագծում</strong> &mdash; Ճարտարապետության և տրամաբանության մշակում։</li>
-                                <li><strong>3: Տեղակայում</strong> &mdash; Հարթակների կարգավորում և կոդի գործարկում։</li>
+                                <li><strong>1: Վերլուծություն</strong> &mdash; Խորասուզում ձեր աշխատանքային հոսքերի մեջ՝
+                                    գտնելու խնդիրները։</li>
+                                <li><strong>2: Նախագծում</strong> &mdash; Ճարտարապետության և տրամաբանության մշակում։
+                                </li>
+                                <li><strong>3: Տեղակայում</strong> &mdash; Հարթակների կարգավորում և կոդի գործարկում։
+                                </li>
                                 <li><strong>4: Վերահսկում</strong> &mdash; Արդյունքների չափում և բարելավում։</li>
                             </ul>
                         </article>
@@ -798,9 +1101,9 @@
                             <h3>Մեր Տեխնոլոգիաները</h3>
                             <p>Գործիքակազմ և Փորձ։</p>
                             <ul>
-                                <li><strong>Հարթակներ:</strong> Zendesk, Jira, Intercom, HubSpot</li>
+                                <li><strong>Հարթակներ:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Լեզուներ:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Տրամաբանություն:</strong> Ավտոմատացում, Webhooks, APIs</li>
+                                <li><strong>Տրամաբանություն:</strong> Ավտոմատացում, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
                                 <li><strong>Մասնագիտացում:</strong> Կիրառական ԱԲ և Չաթբոթեր</li>
                             </ul>
                         </article>
@@ -813,7 +1116,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Կապ</p>
                         <h2 id="am-contact-title">Պատմեք, ինչ եք կառուցում, մենք կօգնենք կարգի բերել։</h2>
-                        <p>Գրեք, թե ինչ գործիքներ եք օգտագործում, ինչն է ցավեցնում կամ որտեղ է ամեն անգամ կանգնում գործը։ Կպատասխանենք մեկ աշխատանքային օրվա ընթացքում։</p>
+                        <p>Գրեք, թե ինչ գործիքներ եք օգտագործում, ինչն է ցավեցնում կամ որտեղ է ամեն անգամ կանգնում
+                            գործը։ Կպատասխանենք մեկ աշխատանքային օրվա ընթացքում։</p>
                     </div>
                     <div class="contact-grid">
                         <div class="contact-card">
@@ -824,12 +1128,15 @@
                         <div class="contact-card">
                             <h3>Աջակցման արագ սեսիա</h3>
                             <p>45 րոպե՝ հասկանալու ներկայիս հերթը և արագ հաղթանակները։</p>
-                            <a href="mailto:contact@deployhelp.com?subject=Support%20Starter%20Session">Ամրագրել սեսիա</a>
+                            <a href="mailto:contact@deployhelp.com?subject=Support%20Starter%20Session">Ամրագրել
+                                սեսիա</a>
                         </div>
                         <div class="contact-card">
                             <h3>Ավտոմատացման էսքիզ</h3>
-                            <p>Բերեք մեկ գործընթաց աջակցության սահմաններից դուրս. միասին կգծենք բոթերը, ստուգումները և վահանակները։</p>
-                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Պլանավորել զանգ</a>
+                            <p>Բերեք մեկ գործընթաց աջակցության սահմաններից դուրս. միասին կգծենք բոթերը, ստուգումները և
+                                վահանակները։</p>
+                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Պլանավորել
+                                զանգ</a>
                         </div>
                     </div>
                 </div>
@@ -840,15 +1147,19 @@
                 <div class="container hero-container">
                     <div class="hero-copy">
                         <p class="eyebrow">Поддержка клиентов и автоматизация для малых команд</p>
-                        <h1 id="ru-hero-title">DeployHelp помогает поддержке оставаться аккуратной, пока вы растёте.</h1>
-                        <p class="hero-lede">Доставка по району, онлайн-магазин или SaaS в бете — мы быстро приводим очередь в порядок и собираем цифровую основу, которой не хватало.</p>
+                        <h1 id="ru-hero-title">DeployHelp помогает поддержке оставаться аккуратной, пока вы растёте.
+                        </h1>
+                        <p class="hero-lede">Доставка по району, онлайн-магазин или SaaS в бете — мы быстро приводим
+                            очередь в порядок и собираем цифровую основу, которой не хватало.</p>
                         <div class="hero-cta" role="group" aria-label="Основные действия">
-                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Связаться%20с%20DEPLOYHELP">Написать нам</a>
+                            <a class="button primary"
+                                href="mailto:contact@deployhelp.com?subject=Связаться%20с%20DEPLOYHELP">Написать нам</a>
                             <a class="button ghost" href="#ru-cs">Посмотреть решения</a>
                         </div>
                         <aside class="hero-note" aria-label="Примеры задач">
                             <h2>ИИ помогает, люди принимают решения.</h2>
-                            <p class="hero-note-footnote">Смешиваем автоматизацию и опыт операторов, чтобы поддержка оставалась быстрой и по-человечески тёплой.</p>
+                            <p class="hero-note-footnote">Смешиваем автоматизацию и опыт операторов, чтобы поддержка
+                                оставалась быстрой и по-человечески тёплой.</p>
                         </aside>
                     </div>
                 </div>
@@ -859,7 +1170,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Поддержка клиентов</p>
                         <h2 id="ru-cs-title">Поддержка, которая растёт вместе с небольшой командой.</h2>
-                        <p>Настраиваем поддержку без лишней бюрократии: понятные роли, аккуратные дашборды и пространство для экспериментов.</p>
+                        <p>Настраиваем поддержку без лишней бюрократии: понятные роли, аккуратные дашборды и
+                            пространство для экспериментов.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -898,7 +1210,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Автоматизация &amp; ИИ</p>
                         <h2 id="ru-automation-title">Автоматизация, которая убирает рутину из ежедневных задач.</h2>
-                        <p>Сочетаем ИИ и проверенные сценарии, чтобы людям досталась живая коммуникация, а не перенос данных.</p>
+                        <p>Сочетаем ИИ и проверенные сценарии, чтобы людям досталась живая коммуникация, а не перенос
+                            данных.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -937,7 +1250,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Цифровой рост</p>
                         <h2 id="ru-digital-title">Сайты, SEO и контент-машины под возможности небольшой команды.</h2>
-                        <p>Запускаем основу быстро и оставляем понятные чек-листы, которые сможете поддерживать своими силами.</p>
+                        <p>Запускаем основу быстро и оставляем понятные чек-листы, которые сможете поддерживать своими
+                            силами.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -983,7 +1297,8 @@
                             <h3>Наш Протокол</h3>
                             <p>Чёткий план выполнения.</p>
                             <ul>
-                                <li><strong>1: Анализ</strong> &mdash; Погружаемся в ваши процессы, чтобы найти проблемы.</li>
+                                <li><strong>1: Анализ</strong> &mdash; Погружаемся в ваши процессы, чтобы найти
+                                    проблемы.</li>
                                 <li><strong>2: Проектирование</strong> &mdash; Разрабатываем архитектуру и логику.</li>
                                 <li><strong>3: Внедрение</strong> &mdash; Настраиваем платформы и запускаем код.</li>
                                 <li><strong>4: Мониторинг</strong> &mdash; Измеряем результаты и вносим коррективы.</li>
@@ -993,9 +1308,9 @@
                             <h3>Наш Стек</h3>
                             <p>Инструменты и Опыт.</p>
                             <ul>
-                                <li><strong>Платформы:</strong> Zendesk, Jira, Intercom, HubSpot</li>
+                                <li><strong>Платформы:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Языки:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Логика:</strong> Автоматизация, Webhooks, APIs</li>
+                                <li><strong>Логика:</strong> Автоматизация, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
                                 <li><strong>Специализация:</strong> Прикладной ИИ и Чат-боты</li>
                             </ul>
                         </article>
@@ -1024,7 +1339,8 @@
                         <div class="contact-card">
                             <h3>Созвон по автоматизации</h3>
                             <p>Берём один процесс вне поддержки и намечаем ботов, проверки и отчётность.</p>
-                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Назначить звонок</a>
+                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Назначить
+                                звонок</a>
                         </div>
                     </div>
                 </div>
@@ -1036,14 +1352,17 @@
                     <div class="hero-copy">
                         <p class="eyebrow">Підтримка клієнтів та автоматизація для невеликих команд</p>
                         <h1 id="ua-hero-title">DeployHelp тримає підтримку охайною, поки ви ростете.</h1>
-                        <p class="hero-lede">Районна доставка, онлайн-крамниця чи SaaS у беті — ми швидко приводимо черги до ладу та збираємо цифровий фундамент, якого бракувало.</p>
+                        <p class="hero-lede">Районна доставка, онлайн-крамниця чи SaaS у беті — ми швидко приводимо
+                            черги до ладу та збираємо цифровий фундамент, якого бракувало.</p>
                         <div class="hero-cta" role="group" aria-label="Основні дії">
-                            <a class="button primary" href="mailto:contact@deployhelp.com?subject=Зв%27язатися%20з%20DEPLOYHELP">Зв’язатися</a>
+                            <a class="button primary"
+                                href="mailto:contact@deployhelp.com?subject=Зв%27язатися%20з%20DEPLOYHELP">Зв’язатися</a>
                             <a class="button ghost" href="#ua-cs">Подивитися рішення</a>
                         </div>
                         <aside class="hero-note" aria-label="Приклади задач">
                             <h2>ШІ підказує, команда вирішує.</h2>
-                            <p class="hero-note-footnote">Поєднуємо автоматизацію та досвід фахівців, щоб підтримка була швидкою й людяною.</p>
+                            <p class="hero-note-footnote">Поєднуємо автоматизацію та досвід фахівців, щоб підтримка була
+                                швидкою й людяною.</p>
                         </aside>
                     </div>
                 </div>
@@ -1054,7 +1373,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Підтримка клієнтів</p>
                         <h2 id="ua-cs-title">Підтримка, що росте разом із вашою командою.</h2>
-                        <p>Налаштовуємо підтримку без зайвої бюрократії: чіткі ролі, зрозумілі дашборди й простір для експериментів.</p>
+                        <p>Налаштовуємо підтримку без зайвої бюрократії: чіткі ролі, зрозумілі дашборди й простір для
+                            експериментів.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -1093,7 +1413,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Автоматизація &amp; ШІ</p>
                         <h2 id="ua-automation-title">Автоматизація, що прибирає рутину з щоденних задач.</h2>
-                        <p>Поєднуємо ШІ та перевірені сценарії, аби команда займалася живим спілкуванням, а не переносила дані між вкладками.</p>
+                        <p>Поєднуємо ШІ та перевірені сценарії, аби команда займалася живим спілкуванням, а не
+                            переносила дані між вкладками.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -1132,7 +1453,8 @@
                     <div class="section-header">
                         <p class="eyebrow">Цифрове зростання</p>
                         <h2 id="ua-digital-title">Сайти, SEO та контент-машини під можливості невеликих команд.</h2>
-                        <p>Запускаємо основу швидко і залишаємо чіткі чек-листи, які реально підтримувати власними силами.</p>
+                        <p>Запускаємо основу швидко і залишаємо чіткі чек-листи, які реально підтримувати власними
+                            силами.</p>
                     </div>
                     <div class="card-grid">
                         <article class="card">
@@ -1178,19 +1500,22 @@
                             <h3>Наш Протокол</h3>
                             <p>Чіткий план виконання.</p>
                             <ul>
-                                <li><strong>1: Аналіз</strong> &mdash; Занурюємось у ваші процеси, щоб знайти проблеми.</li>
+                                <li><strong>1: Аналіз</strong> &mdash; Занурюємось у ваші процеси, щоб знайти проблеми.
+                                </li>
                                 <li><strong>2: Проєктування</strong> &mdash; Розробляємо архітектуру та логіку.</li>
-                                <li><strong>3: Впровадження</strong> &mdash; Налаштовуємо платформи та запускаємо код.</li>
-                                <li><strong>4: Моніторинг</strong> &mdash; Вимірюємо результати та вносимо корективи.</li>
+                                <li><strong>3: Впровадження</strong> &mdash; Налаштовуємо платформи та запускаємо код.
+                                </li>
+                                <li><strong>4: Моніторинг</strong> &mdash; Вимірюємо результати та вносимо корективи.
+                                </li>
                             </ul>
                         </article>
                         <article class="card">
                             <h3>Наш Стек</h3>
                             <p>Інструменти та Досвід.</p>
                             <ul>
-                                <li><strong>Платформи:</strong> Zendesk, Jira, Intercom, HubSpot</li>
+                                <li><strong>Платформи:</strong> Zendesk, Jira, Intercom, HubSpot, Salesforce, Freshdesk, Gorgias, Asana, Monday, ClickUp</li>
                                 <li><strong>Мови:</strong> Python, SQL, JavaScript</li>
-                                <li><strong>Логіка:</strong> Автоматизація, Webhooks, APIs</li>
+                                <li><strong>Логіка:</strong> Автоматизація, Webhooks, APIs, Make.com, Zapier, n8n, Workato</li>
                                 <li><strong>Спеціалізація:</strong> Прикладний ШІ та Чат-боти</li>
                             </ul>
                         </article>
@@ -1219,13 +1544,14 @@
                         <div class="contact-card">
                             <h3>Дзвінок про автоматизацію</h3>
                             <p>Беремо один процес поза підтримкою і намічаємо ботів, перевірки та звітність.</p>
-                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Домовитися про дзвінок</a>
+                            <a href="mailto:contact@deployhelp.com?subject=Automation%20Sketch%20Call">Домовитися про
+                                дзвінок</a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-</main>
+    </main>
 
     <footer>
         <div class="container" data-footer-lang="en">
@@ -1235,7 +1561,7 @@
                     <a href="#en-cs">Customer Support</a>
                     <a href="#en-automation">Automation &amp; AI</a>
                     <a href="#en-digital">Digital Growth</a>
-                <a href="#en-methodology">Stack &amp; Protocol</a>
+                    <a href="#en-methodology">Stack &amp; Protocol</a>
                     <a href="#en-contact">Contact</a>
                     <a href="mailto:contact@deployhelp.com">Email us</a>
                 </div>
@@ -1252,7 +1578,7 @@
                     <a href="#am-cs">Հաճախորդների աջակցություն</a>
                     <a href="#am-automation">Ավտոմատացում</a>
                     <a href="#am-digital">Թվային աճ</a>
-                <a href="#am-methodology">Մեթոդ և Տեխնոլոգիաներ</a>
+                    <a href="#am-methodology">Մեթոդ և Տեխնոլոգիաներ</a>
                     <a href="#am-contact">Կապ</a>
                     <a href="mailto:contact@deployhelp.com">Գրեք մեզ</a>
                 </div>
@@ -1269,7 +1595,7 @@
                     <a href="#ru-cs">Поддержка</a>
                     <a href="#ru-automation">Автоматизация</a>
                     <a href="#ru-digital">Цифровой рост</a>
-                <a href="#ru-methodology">Методология и Стек</a>
+                    <a href="#ru-methodology">Методология и Стек</a>
                     <a href="#ru-contact">Связаться</a>
                     <a href="mailto:contact@deployhelp.com">Написать нам</a>
                 </div>
@@ -1286,7 +1612,7 @@
                     <a href="#ua-cs">Підтримка</a>
                     <a href="#ua-automation">Автоматизація</a>
                     <a href="#ua-digital">Цифрове зростання</a>
-                <a href="#ua-methodology">Методологія та Стек</a>
+                    <a href="#ua-methodology">Методологія та Стек</a>
                     <a href="#ua-contact">Контакт</a>
                     <a href="mailto:contact@deployhelp.com">Написати нам</a>
                 </div>
@@ -1299,88 +1625,89 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navToggle = document.getElementById('navToggle');
-        const languagePanels = document.querySelectorAll('[data-language]');
-        const languageButtons = document.querySelectorAll('[data-lang-toggle]');
-        const navGroups = document.querySelectorAll('[data-nav-lang]');
-        const footerBlocks = document.querySelectorAll('[data-footer-lang]');
-        const LANGS = ['en', 'am', 'ru', 'ua'];
-        const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
-        let activeLanguage = localStorage.getItem('deployhelp-language');
-        if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('navToggle');
+            const languagePanels = document.querySelectorAll('[data-language]');
+            const languageButtons = document.querySelectorAll('[data-lang-toggle]');
+            const navGroups = document.querySelectorAll('[data-nav-lang]');
+            const footerBlocks = document.querySelectorAll('[data-footer-lang]');
+            const LANGS = ['en', 'am', 'ru', 'ua'];
+            const HTML_LANG_MAP = { en: 'en', am: 'hy', ru: 'ru', ua: 'uk' };
+            let activeLanguage = localStorage.getItem('deployhelp-language');
+            if (!LANGS.includes(activeLanguage)) activeLanguage = 'en';
 
-        const getNav = (lang = activeLanguage) => document.querySelector(`[data-nav-lang="${lang}"]`);
+            const getNav = (lang = activeLanguage) => document.querySelector(`[data-nav-lang="${lang}"]`);
 
-        function closeNav() {
-            const nav = getNav();
-            if (nav) nav.classList.remove('is-open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('nav-open');
-        }
+            function closeNav() {
+                const nav = getNav();
+                if (nav) nav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('nav-open');
+            }
 
-        function setLanguage(lang) {
-            activeLanguage = lang;
-            document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
+            function setLanguage(lang) {
+                activeLanguage = lang;
+                document.documentElement.setAttribute('lang', HTML_LANG_MAP[lang] || 'en');
 
-            languagePanels.forEach(panel => {
-                const isActive = panel.dataset.language === lang;
-                panel.toggleAttribute('hidden', !isActive);
-                panel.classList.toggle('is-active', isActive);
-            });
+                languagePanels.forEach(panel => {
+                    const isActive = panel.dataset.language === lang;
+                    panel.toggleAttribute('hidden', !isActive);
+                    panel.classList.toggle('is-active', isActive);
+                });
 
-            navGroups.forEach(nav => {
-                const isActive = nav.dataset.navLang === lang;
-                nav.toggleAttribute('hidden', !isActive);
-                nav.classList.remove('is-open');
-            });
+                navGroups.forEach(nav => {
+                    const isActive = nav.dataset.navLang === lang;
+                    nav.toggleAttribute('hidden', !isActive);
+                    nav.classList.remove('is-open');
+                });
 
-            footerBlocks.forEach(footer => {
-                footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+                footerBlocks.forEach(footer => {
+                    footer.toggleAttribute('hidden', footer.dataset.footerLang !== lang);
+                });
+
+                languageButtons.forEach(button => {
+                    const isActive = button.dataset.langToggle === lang;
+                    button.classList.toggle('is-active', isActive);
+                    button.setAttribute('aria-pressed', String(isActive));
+                });
+
+                const activeNav = getNav(lang);
+                if (activeNav) navToggle.setAttribute('aria-controls', activeNav.id);
+                closeNav();
+                localStorage.setItem('deployhelp-language', lang);
+            }
+
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    const nav = getNav();
+                    if (!nav) return;
+                    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', String(!expanded));
+                    nav.classList.toggle('is-open');
+                    document.body.classList.toggle('nav-open', !expanded);
+                });
+            }
+
+            document.querySelectorAll('[data-nav-lang] a').forEach(link => {
+                link.addEventListener('click', () => { closeNav(); });
             });
 
             languageButtons.forEach(button => {
-                const isActive = button.dataset.langToggle === lang;
-                button.classList.toggle('is-active', isActive);
-                button.setAttribute('aria-pressed', String(isActive));
+                button.addEventListener('click', () => {
+                    const lang = button.dataset.langToggle;
+                    if (lang && lang !== activeLanguage) setLanguage(lang);
+                });
             });
 
-            const activeNav = getNav(lang);
-            if (activeNav) navToggle.setAttribute('aria-controls', activeNav.id);
-            closeNav();
-            localStorage.setItem('deployhelp-language', lang);
-        }
+            setLanguage(activeLanguage);
 
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                const nav = getNav();
-                if (!nav) return;
-                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                navToggle.setAttribute('aria-expanded', String(!expanded));
-                nav.classList.toggle('is-open');
-                document.body.classList.toggle('nav-open', !expanded);
-            });
-        }
-
-        document.querySelectorAll('[data-nav-lang] a').forEach(link => {
-            link.addEventListener('click', () => { closeNav(); });
-        });
-
-        languageButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const lang = button.dataset.langToggle;
-                if (lang && lang !== activeLanguage) setLanguage(lang);
+            const year = new Date().getFullYear();
+            ['En', 'Am', 'Ru', 'Ua'].forEach(suffix => {
+                const span = document.getElementById(`currentYear${suffix}`);
+                if (span) span.textContent = year;
             });
         });
-
-        setLanguage(activeLanguage);
-
-        const year = new Date().getFullYear();
-        ['En','Am','Ru','Ua'].forEach(suffix => {
-            const span = document.getElementById(`currentYear${suffix}`);
-            if (span) span.textContent = year;
-        });
-    });
     </script>
 </body>
+
 </html>
