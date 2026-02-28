@@ -1,0 +1,32 @@
+{
+  "name": "DEPLOYHELP LLC | Customer Support & Automation Consulting",
+  "short_name": "DEPLOYHELP",
+  "description": "DEPLOYHELP LLC helps teams implement Zendesk, chatbots, help centers, and business automation in English, Armenian, Russian, and Ukrainian.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6B00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "consulting", "automation", "support"],
+  "shortcuts": [
+    {
+      "name": "Contact",
+      "url": "/#en-contact",
+      "description": "Get in touch with DEPLOYHELP"
+    }
+  ]
+}

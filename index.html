@@ -19,6 +19,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://deployhelp.com/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="manifest" href="/site.webmanifest">
     <meta property="og:title" content="DEPLOYHELP LLC | Customer Support &amp; Automation Consulting">
     <meta property="og:description"
         content="Bilingual and multilingual customer support, Zendesk rollouts, chatbots, and business automation services from DEPLOYHELP LLC." />
@@ -1831,8 +1832,19 @@
                 copyBtn.textContent = 'COPIED!';
             });
         });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch((err) => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
     </script>
 </body>
-
 
 </html>
